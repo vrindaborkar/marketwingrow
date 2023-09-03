@@ -9,6 +9,8 @@ import AuthService from "../../services/auth.service";
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Card1 from '../../components/Card1'
 import useWindowDimensions from '../../components/useWindowDimensions';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import { blue } from "@mui/material/colors";
 
 
 const Leave =()=>{
@@ -143,8 +145,12 @@ const handleSubmit1 = async (e)=>{
 
 
     return(
+      <div>
+      <Link to='/employee/'>
+        <ArrowLeftIcon sx={{ color: blue[900], fontSize: 45}}></ArrowLeftIcon>
+        </Link>
         <div className="leaveBox">
-          <h2>Apply for leave</h2>
+          <h1>Apply for leave</h1>
         <form
             className="register_details"
             component="form"
@@ -202,6 +208,7 @@ const handleSubmit1 = async (e)=>{
           <Card1 date={d.date} reason ={d.reason} approved={d.approved}></Card1>);
           })}
           
+        </div>
         </div>
     )
 }

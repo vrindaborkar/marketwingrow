@@ -15,10 +15,10 @@ import "react-toastify/dist/ReactToastify.css";
 import firebase from "./firebase";
 import '../styles/Styles.css'
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+// import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-import Autocomplete from "@mui/material/Autocomplete";
-import NavMenu from "../components/NavMenu";
+// import Autocomplete from "@mui/material/Autocomplete";
+// import NavMenu from "../components/NavMenu";
 import useWindowDimensions from "../components/useWindowDimensions";
 //import Select from 'react-select';
 const user = AuthService.getCurrentUser();

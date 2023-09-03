@@ -7,9 +7,9 @@ import AuthService from "../services/auth.service";
 import Spinner from "../components/Spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import usePrevLocation from '../hooks/usePrevLocation'
+// import usePrevLocation from '../hooks/usePrevLocation'
 import { parsePhoneNumberFromString } from 'libphonenumber-js';
-import NavMenu from "../components/NavMenu";
+// import NavMenu from "../components/NavMenu";
 import useWindowDimensions from "../components/useWindowDimensions";
 
 const user = AuthService.getCurrentUser();

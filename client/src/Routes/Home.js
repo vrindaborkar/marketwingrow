@@ -10,7 +10,7 @@ import Measures from '../components/Measures';
 import { useTranslation } from "react-i18next";
 import AuthService from '../services/auth.service';
 import FarmerService from '../services/farmer.service';
-import NavMenu from '../components/NavMenu';
+// import NavMenu from '../components/NavMenu';
 
 const Home = ({ t, languages }) => {
   const[stallsBooked,setStallsBooked] = useState([])
@@ -57,6 +57,33 @@ const Home = ({ t, languages }) => {
           </option>
         ))}
       </select>
+      
+
+
+      <div className='book-btn-section'>
+        <h1>{t('tagline1_home')}</h1>
+        <h2>{t('tagline2_home')}</h2>
+        <button onClick={() => {
+          console.log(user)
+          if (user === null) {
+            navigate('/home/temp');
+          }
+
+          else {
+            navigate('/farmers/stallplaces')
+          }
+        }}
+          className="bookstall_btn">
+          {t('book_stall')}
+        </button>
+        <button style={{ marginLeft: '3px' }} onClick={() => { window.open('https://wingrowagritech.com ') }} className="bookstall_btn_about">
+          {t('about_heading')}
+        </button>
+      </div>
+      
+      <div  className='book-btn-section'>
+        <h1>Number of Booked Stalls : {stallsBooked.length + 978}</h1>
+      </div>
 
       {/* <div className='first_section'>
         <div className='first_section_component'>
@@ -128,31 +155,7 @@ const Home = ({ t, languages }) => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <div  className='book-btn-section'>
-        <h1>{t("number_of_booked_stalls")} : {stallsBooked.length + 478}</h1>
-      </div>
-
-
-      <div className='book-btn-section'>
-        <h1>{t('tagline1_home')}</h1>
-        <h2>{t('tagline2_home')}</h2>
-        <button onClick={() => {
-          console.log(user)
-          if (user === null) {
-            navigate('/home/temp');
-          }
-
-          else {
-            navigate('/farmers/stallplaces')
-          }
-        }}
-          className="bookstall_btn">
-          {t('book_stall')}
-        </button>
-        <button style={{ marginLeft: '3px' }} onClick={() => { window.open('https://wingrowagritech.com ') }} className="bookstall_btn_about">
-          {t('about_heading')}
-        </button>
-      </div>
+      
       <div data-aos="fade-left" className="transimgr">
         <img src="./images/raspberry.png" alt="Skytsunami" />
       </div>
@@ -232,7 +235,7 @@ const Home = ({ t, languages }) => {
               <li class="" data-aos="fade-left" className="h a">{t("key_feature4")}</li>
             </ol>
           </div>
-          <img src='./images/centerimagecroped.png' alt='img' />
+          <img src='./images/centerimagenew.png' alt='img' />
           <div className='keyfeature_container'>
             <ol class="listed">
               <li class="" data-aos="fade-right" className="h a">{t("key_feature5")}</li>

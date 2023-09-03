@@ -19,6 +19,7 @@ import { WithContext as ReactTags } from "react-tag-input";
 import { Modal, Backdrop, Fade } from "@mui/material";
 import NavMenu from '../../components/NavMenu';
 import useWindowDimensions from '../../components/useWindowDimensions';
+import { marketData } from '../../constants/Data';
 
 // const cards = [
 //   { img: 'https://media.timeout.com/images/105263065/750/422/image.jpg', title: 'Card title 1', time: '00:00 am - 00:00 pm' },
@@ -140,18 +141,87 @@ const CustomersLandingpage = ({t}) => {
         ))}
       </div> */}
 
-      <div data-aos="fade-left" className="transimgrC">
+      {/* <div data-aos="fade-left" className="transimgrC">
         <img src="./images/apples.png" alt="Skytsunami" />
       </div>
       <div className="first_header">
         <h1 className="divider" textAlign="left" data-aos="fade-right">
           {t("live_markets")}
         </h1>
+      
         <i data-aos="fade-right" class="fa-sharp fa-solid fa-location-dot fa-4x"></i>
+      </div> */}
+      
+
+      <div className='liveMarket'>
+        <h1>Live Markets</h1>
+        <hr/>
       </div>
 
       <>
-        <div className="cards-wrapper">
+
+      <div className='markets'>
+      {
+      
+      marketData.map(data=>(
+        <div className='marketData'>
+          <div className='marketImages'><img src={data.url} alt="markets"/></div>
+          <h2>{data.location}</h2>
+          <div className='downButton'>
+          <a className="btn btn-primary" onClick={() => setOpen(true)}>
+                    {t("View_Offers")}
+          </a>
+          <Modal
+                    open={open}
+                    onClose={() => setOpen(false)}
+                    closeAfterTransition
+                    BackdropComponent={Backdrop}
+                    BackdropProps={{ timeout: 500 }}
+                  >
+                    <Fade in={open}>
+                      <div className="offer-box">
+                        <div className='column'>
+                        <h2>Commodity</h2>
+                        <h6>Comm 1</h6>
+                        <h6>Comm 2</h6>
+                        <h6>Comm 3</h6>
+                      
+                        </div>
+                        <div className='column'>
+                        <h2>Quantity</h2>
+                        <h6>Quantity 1</h6>
+                        <h6>Quantity 2</h6>
+                        <h6>Quantity 3</h6>
+                        
+                        </div>
+                        <div className='column'>
+                        <h2>Offer rate</h2>
+                        <h6>Offer rate 1</h6>
+                        <h6>Offer rate 2</h6>
+                        <h6>offer rate 3</h6>
+                        
+                        </div>
+                        
+                        {/* <ul>
+                          {card.offers.map((offer) => (
+                            <li key={offer.id}>{offer.text}</li>
+                          ))}
+                        </ul> */}
+                      </div>
+                    </Fade>
+            </Modal>
+            <a href="#" className="btn btn-primary">
+                    {t("get_direction")}
+            </a>
+            </div>
+            {/* <hr style={{margin: '0px 20px 15px 20px'}}></hr> */}
+        </div>
+      ))
+      
+      
+      }
+      </div>
+        {/* <div className="cards-wrapper">
           {cards
             .slice((page - 1) * itemsPerPage, page * itemsPerPage)
             .map((card, index) => (
@@ -195,8 +265,8 @@ const CustomersLandingpage = ({t}) => {
                 </div>
               </div>
             ))}
-        </div>
-        <div className="d-flex justify-content-center mt-3">
+        </div> */}
+        {/* <div className="d-flex justify-content-center mt-3">
           <button
             className="btn btn-primary me-3"
             onClick={() => handleClick("prev")}
@@ -211,25 +281,19 @@ const CustomersLandingpage = ({t}) => {
           >
             {t("Next")}
           </button>
-        </div>
+        </div> */}
       </>
 
 
-      <div className='line1'>
+      {/* <div className='line1'>
         <h1>
           {t("We got the perfect products for your needs")}
         </h1>
-      </div>
+      </div> */}
 
-      <div data-aos="fade-left" className="transimgrC">
-        <img src="./images/raspberry.png" alt="Skytsunami" />
-      </div>
-      <div className="first_header">
-        <h1 className="divider" textAlign="left" data-aos="fade-right">
-          {t("product_categories")}
-
-        </h1>
-        <i data-aos="fade-right" class="fa-sharp fa-solid fa-cart-shopping fa-4x"></i>
+      <div className='liveMarket'>
+        <h1>Product Categories</h1>
+        <hr id='productID'/>
       </div>
       <div className="product-categories" >
         <div className="categories-holder" data-aos="zoom-in">
@@ -324,11 +388,9 @@ const CustomersLandingpage = ({t}) => {
       </div>
 
 
-      <div className="first_header">
-        <h1 className="divider" textAlign="left" data-aos="fade-right">
-          {t("top_selling_products")}
-        </h1>
-        <i data-aos="fade-right" class="fa-solid fa-bag-shopping fa-4x"></i>
+      <div className='liveMarket'>
+        <h1>Top Sellers</h1>
+        <hr id='liveHR' />
       </div>
       {/* <div className="top-product">
         <div className="product">
@@ -350,67 +412,23 @@ const CustomersLandingpage = ({t}) => {
       </div> */}
 
       <>
-      <div className="cards-wrapper">
-          {cards
-            .slice((page - 1) * itemsPerPage, page * itemsPerPage)
-            .map((card, index) => (
-              <div className="card" key={index}>
-                <img
-                  src='https://media.timeout.com/images/105263065/750/422/image.jpg'
-                  className="card-img-top"
-                  alt="card image"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{t(card.marketName)}</h5>
-                  <p className="card-text">{card.bookedAt}</p>
-                  <a className="btn btn-primary" onClick={() => setOpen(true)}>
-                    {t("View_Offers")}
-                  </a>
-
-                  <Modal
-                    open={open}
-                    onClose={() => setOpen(false)}
-                    closeAfterTransition
-                    BackdropComponent={Backdrop}
-                    BackdropProps={{ timeout: 500 }}
-                  >
-                    <Fade in={open}>
-                      <div className="offer-box">
-                        <h5>{t("Offers")}:</h5>
-                        <ul>
-                          {card.offers.map((offer) => (
-                            <li key={offer.id}>{offer.text}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </Fade>
-                  </Modal>
-
-
-
-                  <a href="#" className="btn btn-primary">
-                    {t("get_direction")}
-                  </a>
-                </div>
-              </div>
-            ))}
+      
+      <div className='topSellers'>
+      {
+      marketData.map(data=>(
+        <div className='marketData' >
+          <div className='marketImages' ><img src={data.url} alt="markets"/></div>
+          <h2 style={{textAlign: 'center'}}>{data.location}</h2>
         </div>
-        <div className="d-flex justify-content-center mt-3">
-          <button
-            className="btn btn-primary me-3"
-            onClick={() => handleClick("prev")}
-            disabled={page === 1}
-          >
-            {t("Previous")}
-          </button>
-          <button
-            className="btn btn-primary"
-            onClick={() => handleClick("next")}
-            disabled={page === maxPages}
-          >
-            {t("Next")}
-          </button>
-        </div>
+      ))
+      
+    }
+      </div>
+      
+      
+       <div className="offerCarousel-container">
+        <OffersCarousel />
+      </div>
 
       </>
 
@@ -424,19 +442,17 @@ const CustomersLandingpage = ({t}) => {
       <div className="feedback-container">
         <Feedback />
       </div> */}
-      <div className='line1'>
+      {/* <div className='line1'>
         <h1>
           {t("Help us improve your experience")}
         </h1>
       </div>
       <div data-aos="fade-left" className="transimgrC">
         <img src="./images/apples.png" alt="Skytsunami" />
-      </div>
-      <div className="first_header">
-        <h1 className="divider" textAlign="left" data-aos="fade-right">
-          {t("feedback")}
-        </h1>
-        <i data-aos="fade-right" class="fa-solid fa-comments fa-4x"></i>
+      </div> */}
+      <div className='liveMarket'>
+        <h1>Feedback</h1>
+        <hr id='feedbackHR'/>
       </div>
       <div className='feedback'>
         <div className="feedback-container">

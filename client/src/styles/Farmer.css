@@ -90,20 +90,20 @@
 .backbtndiv{
       margin-top: 30px;
         /* margin-left: 5rem; */
-        margin-right: 1rem;
-        margin-bottom: 1.5rem;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
 }
 .backbtn {
   display: inline;
   margin-top: -570px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   text-align: center;
   border-radius: 30%;
   font-size: 15px !important;
   border-radius: 30px !important;
   color: white;
   font-family:  'Arturo';;
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
   width: 10rem;
   padding: 1rem 1.5rem !important;
   font-family:  'Arturo';;
@@ -135,7 +135,7 @@
 
 .inwardData {
   /* flex:1; */
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   height: 70%;
   width: 40%;
   /* min-height: 80vh;
@@ -149,7 +149,7 @@
 }
 
 .farmers>h1 {
-  margin-top: 7rem;
+  /* margin-top: 7rem; */
   text-align: center;
   color: #3aa54b;
   font-weight: 600;
@@ -158,7 +158,7 @@
 
 .outwardData {
   /* flex: 1; */
-  margin-top: 5rem;
+  /* margin-top: 2rem; */
   height: 70%;
   width: 40%;
   /* min-height: 80vh;
@@ -311,11 +311,12 @@
 }
 
 .main_header_places {
-  margin: 2rem;
+  margin: 3rem 2rem 0rem 2rem;
   text-align: center;
   font-size: 2rem;
   color: rgb(109, 104, 104);
-  font-family:  'Arturo';;
+  font-family:  'Arturo';
+  font-weight: bold;
 }
 
 .places_market_component0 {
@@ -505,6 +506,11 @@
   cursor: pointer;
   font-family:  'Arturo';;
 }
+.add-submit{
+  display: flex;
+  justify-content: center;
+  /* margin-left: 6rem; */
+}
 
 @media (max-width: 1080px) {
   .farmers_navigate {
@@ -516,7 +522,9 @@
        left: 35rem;
      }
     .add-submit{
-      margin-left: 6rem;
+      display: flex;
+      justify-content: center;
+      /* margin-left: 6rem; */
     }
 }
 
@@ -558,9 +566,12 @@
   .inwardData {
     width: 80%;
     border-bottom: 1px black solid;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-family:  'Arturo';;
   }
+  .backbtndiv {
+    margin-top: 4px;
+}
 
   .outwardData {
     width: 80%;
@@ -569,7 +580,7 @@
   }
 
   .farmers>h1 {
-    margin-top: 7rem;
+    margin-top: 3rem;
     font-family:  'Arturo';;
   }
 
@@ -828,7 +839,7 @@ sup {
     font-family:  'Arturo';;
   }
     .add-submit {
-      margin-left: -1rem;
+      /* margin-left: -1rem; */
     }
 }
 
@@ -851,12 +862,12 @@ sup {
 
 @media (max-width: 545px) {
   .add-submit {
-    margin-left: 6rem;
+    /* margin-left: 6rem; */
   }
 }
 @media (max-width: 450px) {
   .add-submit {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
   }
 }
 @media (max-width: 400px) {

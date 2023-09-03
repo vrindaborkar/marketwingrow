@@ -24,8 +24,8 @@ import {
   Legend
 } from 'chart.js';
 
-import { Bar } from 'react-chartjs-2';
-import NavMenu from "../../components/NavMenu";
+// import { Bar } from 'react-chartjs-2';
+// import NavMenu from "../../components/NavMenu";
 
 ChartJS.register(
   BarElement,
@@ -99,9 +99,9 @@ const FarmersHome = ({t}) => {
       setmobile(false)
     }
   }, [width])
-  console.log(InwardData)
+  // console.log(InwardData)
 
-  const arr = { "Hadapsar": 3, 'Kharadi IT Park': 4, 'Karve Nagar': 2, 'Bramhasun City': 5, 'Wagholi': 5,'Wanawadi': 6, 'NIBM':6, 'Magarpatta': 0, 'Amanora City': 0 }
+  const arr = { 'Hadapsar': 3, 'Undri':3, 'Kharadi IT Park': 4, 'Karve Nagar': 2, 'Bramhasun City': 5, 'Wagholi': 5,'Wanawadi': 6, 'Aditya Nandanvan':6,'Magarpatta': 0, 'Amanora City': 0 }
 
 
   const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -129,6 +129,7 @@ const FarmersHome = ({t}) => {
   const locations = [
 
     { location: t("Hadapsar") },
+    { location: t("Undri") },
     { location: t("Karve Nagar") },
     { location: t("Kharadi IT Park") },
     { location: t("Wanawadi") },
@@ -137,6 +138,7 @@ const FarmersHome = ({t}) => {
     { location: t("Magarpatta") },
     { location: t("Amanora City") },
     { location: t("Bramhasun City") },
+    {location:  t("Aditya Nandanvan")}
     
   ];
 
@@ -145,7 +147,7 @@ const FarmersHome = ({t}) => {
   const cumulativeData = {};
 
 
-  const marketNames = ['Hadapsar', 'Kharadi IT Park', 'Karve Nagar', 'Bramhasun City', 'Wanawadi', 'Magarpatta', 'Amanora City','NIBM','Wagholi'];
+  const marketNames = ['Hadapsar', 'Undri', 'Kharadi IT Park', 'Karve Nagar', 'Bramhasun City', 'Wanawadi', 'Magarpatta', 'Amanora City','Aditya Nandanvan','Wagholi'];
 
   // Loop through each market and calculate cumulative data
   for (const market of marketNames) {
@@ -548,7 +550,7 @@ console.log(cumulativeData['Hadapsar']['totalNetProfit'])
             groupId: t('tuesday')
           },
           {
-            value: cumulativeData['Hadapsar']['totalNetProfit'],
+            value: cumulativeData['Hadapsar']['totalNetProfit']+cumulativeData['Undri']['totalNetProfit'],
             groupId: t('wednesday')
           },
           { value: cumulativeData['Karve Nagar']['totalNetProfit'],
@@ -563,7 +565,7 @@ console.log(cumulativeData['Hadapsar']['totalNetProfit'])
             groupId: t('friday')
           },
           {
-            value: cumulativeData['Wanawadi']['totalNetProfit'] + cumulativeData['NIBM']['totalNetProfit'], 
+            value: cumulativeData['Wanawadi']['totalNetProfit'] + cumulativeData['Aditya Nandanvan']['totalNetProfit'], 
             groupId: t('saturday')
           },
           {
@@ -595,7 +597,9 @@ console.log(cumulativeData['Hadapsar']['totalNetProfit'])
       }
     }
 
-
+    const hadapsarData = Object.keys(cumulativeData['Hadapsar'])
+                            .filter(commodity => commodity !== 'totalNetProfit') 
+                            .map(commodity => [commodity, cumulativeData['Hadapsar'][commodity]['netProfit']])
     const karveNagarData = Object.keys(cumulativeData['Karve Nagar'])
                             .filter(commodity => commodity !== 'totalNetProfit') 
                             .map(commodity => [commodity, cumulativeData['Karve Nagar'][commodity]['netProfit']])
@@ -617,9 +621,13 @@ console.log(cumulativeData['Hadapsar']['totalNetProfit'])
 const WagholiData = Object.keys(cumulativeData['Wagholi'])
       .filter(commodity => commodity !== 'totalNetProfit')
   .map(commodity => [commodity, cumulativeData['Wagholi'][commodity]['netProfit']])
-    const NIBMData = Object.keys(cumulativeData['NIBM'])
+    const adityaNandanvanData = Object.keys(cumulativeData['Aditya Nandanvan'])
       .filter(commodity => commodity !== 'totalNetProfit')
-      .map(commodity => [commodity, cumulativeData['NIBM'][commodity]['netProfit']])
+      .map(commodity => [commodity, cumulativeData['Aditya Nandanvan'][commodity]['netProfit']])
+
+      const undriData = Object.keys(cumulativeData['Undri'])
+      .filter(commodity => commodity !== 'totalNetProfit')
+      .map(commodity => [commodity, cumulativeData['Undri'][commodity]['netProfit']])
 
     const drilldownData = [
       {
@@ -640,13 +648,26 @@ const WagholiData = Object.keys(cumulativeData['Wagholi'])
           .filter(commodity => commodity !== 'totalNetProfit') 
           .map(commodity => [commodity, cumulativeData['Kharadi IT Park'][commodity]['netProfit']])
       },
-      // {
-      //   dataGroupId: t('thursday'),
-      //   data: [
-      //     ...karveNagarData,
-      //     ...kharadiData
-      //   ]
-      // },
+      {
+        dataGroupId: t('tuesday'),
+        data: [
+          ...karveNagarData 
+          
+        ]
+      },
+      {
+        dataGroupId: t('thursday'),
+        data: [
+          ...kharadiData
+        ]
+      },
+      {
+        dataGroupId: t('wednesday'),
+        data: [
+          ...hadapsarData,
+          ...undriData
+        ],
+      },
       {
         dataGroupId: t('friday'),
         data: [
@@ -658,7 +679,7 @@ const WagholiData = Object.keys(cumulativeData['Wagholi'])
         dataGroupId: t('saturday'),
         data: [
           ...wanawadiData,
-          ...NIBMData
+          ...adityaNandanvanData
         ],
       },
       {
@@ -1004,11 +1025,10 @@ const WagholiData = Object.keys(cumulativeData['Wagholi'])
                   <div className="farmerdata_items">
                     <p>{t("monday")}    : None</p>
                     <p>{t("tuesday")}   : {t("karvenagar_location")}</p>
-                    <p>{t("wednesday")} : {t("hadapsar_location")}</p>
-
+                    <p>{t("wednesday")} : {t("hadapsar_location")}, {t("undri_location")}</p>
                     <p>{t("thursday")}  :  {t("kharadi_it_park_location")}</p>
                     <p>{t("friday")}    : {t("bramhasun_city_location")}, {t("wagholi_location")} </p>
-                    <p>{t("saturday")}  : {t("wanawadi_location")}, {t("nibm_location")} </p>
+                    <p>{t("saturday")}  : {t("wanawadi_location")}, {t("Aditya Nandanvan")} </p>
                     <p>{t("sunday")}    : {t("magarpatta_location")}, {t("amanora_city_location")}</p>
 
                   </div>

@@ -34,11 +34,10 @@ const EmployeeLanding = () => {
         </Link>
         
         <Link to='/employee/leave'>
-        <div>
+        <div id='f2'>
         <h2>
           Apply for leave
         </h2>
-      
         </div>
         </Link>
         {/* <Button onClick={()=>setFlag(3)}>

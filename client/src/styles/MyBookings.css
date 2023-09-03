@@ -27,7 +27,7 @@
 
 .booking_cards {
     display: flex;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +91,7 @@
 }
 
 .backbtndiv {
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
 
@@ -131,6 +131,7 @@
 @media (max-width: 550px) {
 .backbtndiv{
 margin-right: -800px;
+margin-top: 3px;
 }
 }
 .pageBottom{

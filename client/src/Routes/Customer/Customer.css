@@ -12,19 +12,42 @@
     background-color: #F6F6F8;
 }
 .offer-box{
-        display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-            left: 50rem;
-            top: 30rem;
-            background-color: white;
-            position: relative;
-            padding-bottom: 5rem;
-            padding-top: 5rem;
-            padding-right: 3rem;
+    /* display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    
+    left: 24rem;
+    top: 13rem;
+    width: 59%;
+    height: 315px;
+    background-color: white;
+    position: relative;
+    padding-bottom: 0rem;
+    /* padding-top: 3rem; */
+    /* padding-right: 0rem; */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.column{
+    border: 1px solid #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.column h2{
+    margin: 0 auto 0 auto;
+    font-weight: bold;
+}
+.column h6{
+    margin: 0 auto 0 auto;
 }
 
 .snacks_wrapper {
@@ -117,6 +140,13 @@
     background-color: rgb(78, 40, 115);
 }
 
+.markets{
+    display: flex;
+    /* flex-direction: row; */
+    /* width: max-content; */
+    overflow-x: auto;
+}
+
 @media (max-width : 600px) {
     .snacks_main_component {
         justify-content: center;
@@ -128,6 +158,28 @@
         justify-content: space-around;
         width: 80vw;
         height: 20vh;
+    }
+    .markets{
+        display: inline;
+    }
+    .offer-box{
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        left: 1.5rem;
+        top: 13rem;
+        width: 90%;
+        height: 315px;
+        background-color: white;
+        position: relative;
+        padding-bottom: 0rem;
+        padding-top: 3rem;
+        /* padding-right: 0rem; */
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -224,11 +276,11 @@
     line-height: 128.91%;
 }
 
-.product-categories {
-    background-color: #bf3a30;
-    background-image: linear-gradient(315deg, #198754 0%, #3aa54b 74%);
+/* .product-categories {
+    /* background-color: #bf3a30; */
+    /* background-image: linear-gradient(315deg, #198754 0%, #3aa54b 74%); */
 
-}
+/* } */ */
 
 .top-product {
     width: 80%;
@@ -268,11 +320,6 @@
 .offerCarousel-container {
     width: 100%;
     padding: 50px;
-    background:
-        radial-gradient(ellipse at bottom, #87ca8a 20%, #1f8a70 100%),
-        linear-gradient(to bottom, #1f8a70 0%, #117864 100%);
-
-
 }
 
 .carousel .control-dots .dot {
@@ -282,8 +329,8 @@
 
 
 .carousel .slide img {
-    /* border-radius: 30px; */
-    border: 2px solid green !important;
+    border-radius: 30px;
+    /* border: 2px solid green !important; */
     height: 50%;
 }
 
@@ -605,7 +652,7 @@
 
     .carousel .slide img {
         border-radius: 10px;
-        border: 1px solid green !important;
+        /* border: 1px solid green !important; */
     }
 
     .banner-carousel-container {
@@ -620,6 +667,58 @@
     }
 }
 
+.liveMarket{
+    margin: 0px 0px 30px 35px;
+ }
+ .liveMarket h1{
+     font-weight: bold;
+     position: relative;
+     top: 23px;
+     margin-bottom: -7px;
+ }
+ .liveMarket hr{
+     margin-left: 200px;
+     margin-right: 20px;
+ }
+ .marketImages img{
+    border-radius: 20px;
+    height: 400px;
+    width: 700px;
+    margin-left: 25px;
+}
+.marketData h2{
+    margin-top: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.downButton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.downButton a{
+    margin-right: 60px;
+    margin-left: 60px;
+}
+#productID{
+    margin-left: 310px;
+    margin-right: 20px;
+}
+#liveHR{
+    margin-left: 165px;
+    margin-right: 20px;
+}
+.topSellers {
+    /* display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 30px; */
+    display: flex;
+    overflow-x: auto;
+}
+#feedbackHR{
+    margin-left: 145px;
+    margin-right: 20px;
+}
 @media only screen and (max-width: 450px) {
     .title-br {
         display: block;
@@ -632,10 +731,10 @@
     }
 
     a.btn-primary {
-        font-size: 10px !important;
+        font-size: 13px !important;
         width: fit-content !important;
         height: fit-content !important;
-        padding: 10px 5px 10px 5px !important;
+        padding: 10px 15px 10px 15px !important;
         margin: 0px;
     }
 
@@ -655,9 +754,9 @@
     }
     .feedback-para {
         font-size: 15px;
-        text-align: center;
-        line-height: 40px;
-        margin: 34px 0 30px 0;
+        text-align: justify;
+        line-height: 30px;
+        margin: 55px 0 30px 5px;
     }
 
     .market {
@@ -698,29 +797,29 @@
     }
 
     .categories-holder {
-        width: 85%;
+        width: 99%;
         height: 360px;
-        margin-left: 1.5em;
+        margin-left: -1.5em;
         padding-left: 38px;
-        padding-top: 20px;
+        padding-top: 0px;
     }
 
     .category {
-        width: 88px;
-        height: 120px;
+        width: 100px;
+        height: 115px;
         padding: 5px;
         text-align: center;
     }
     
 
     .category img {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 55px;
         border-radius: 10px;
     }
 
     .category h5 {
-        font-size: 10px;
+        font-size: 12px;
         font-weight: bold;
     }
 
@@ -779,14 +878,54 @@
     }
 
     .carousel .slide img {
-        border-radius: 10px;
-        border: 1px solid green !important;
+        border-radius: 30px;
+        /* border: 1px solid green !important; */
     }
 
     .banner-carousel-container {
         width: 100% !important;
         padding: 10px !important;
         margin-top: 20px !important;
+    }
+    .marketImages{
+        margin-left: 35px;
+    }
+    .marketImages img{
+        border-radius: 20px;
+        height: 125px;
+        width: 90%;
+        margin-left: 0px;
+    }
+    .marketData h2{
+        margin-top: 15px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .downButton{
+        display: flex;
+        justify-content: center;
+        margin-left: 35px;
+    }
+    .downButton a{
+        margin: 3px 40px 30px 0px;
+    }
+    .liveMarket{
+       margin: 5px 0px 30px 35px;
+    }
+    .liveMarket h1{
+        font-weight: bold;
+        position: relative;
+        top: 23px;
+        margin-bottom: 3px
+    }
+    .liveMarket hr{
+        margin-left: 140px;
+        margin-right: 20px;
+    }
+    .topSellers{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        row-gap: 30px;
     }
 }
 @media only screen and (max-width: 300px){
@@ -919,13 +1058,12 @@
 }
 
 .carousel-inner {
-    padding: 3em;
+    padding: 0em;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    margin: 42em 2em;
-    background-color: #E03538;
+    margin: 0em 2em;
     width: 5vh;
     height: 5vh;
     border-radius: 50%;

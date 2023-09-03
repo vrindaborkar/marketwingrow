@@ -33,7 +33,13 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import NavMenu from "../../components/NavMenu";
 import useWindowDimensions from "../../components/useWindowDimensions";
+import {styled} from '@mui/material'
 
+
+// const StyledIcon = styled(ArrowForwardIcon)`
+// font-size: 20vw;
+// max-height: 40px;
+// `
 const useStyles = makeStyles({
   arrowIcon: {
     position:'relative',
@@ -89,6 +95,23 @@ function Test({ setbookingDetails, setValue, t }) {
   //   setStatus(st)
   // },[status])
   var status1 = true
+
+  const RenderIcon=()=>{
+    const icons = [];
+    for(var i=0; i<151; i++){
+      icons.push(<i style={{marginLeft: '10px'}} class="arrow right"></i>);
+      // <i class="arrow right"></i>
+    }
+    return icons;
+  }
+  const RenderIcon2=()=>{
+    const icons = [];
+    for(var i=0; i<152; i++){
+      icons.push(<i style={{marginLeft: '10px'}} class="arrow left"></i>);
+      // <i class="arrow right"></i>
+    }
+    return icons;
+  }
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 767px)');
     setIsMobile(mediaQuery.matches);
@@ -814,7 +837,6 @@ function Test({ setbookingDetails, setValue, t }) {
             {console.log(weekId)}
             <h2 className="market-name" style={{ textAlign: 'center', marginTop: '20px' }}>{t(Id)} {t("only_on")} {t(weekdays[arr[Id] - 1])}</h2>
             <Grid className="input-div-holder" container spacing={2}>
-
               <Grid item xs={12} sm={6}>
                 <InputLabel className="stall-booking-lable">
                   {t("enter_booking_date")}
@@ -1032,6 +1054,15 @@ function Test({ setbookingDetails, setValue, t }) {
                             date={date}
                             t={t}
                           />
+                          <p  className ='firstPara'>
+                            Entry
+                            {RenderIcon()}
+                            </p>
+                          <p style={{marginLeft:'2850px'}}> <i class="arrow down"></i></p>
+                          <p style={{marginLeft:'2850px'}}> <i class="arrow down"></i></p>
+
+{/*               
+                         <hr style={{borderStyle: 'dotted'}}/>
                           {!isMobile && <Stall
                             data={UpdatedData.slice(24, 25)}
                             handleClick={handleClick}
@@ -1047,9 +1078,17 @@ function Test({ setbookingDetails, setValue, t }) {
                             alreadyBooked={alreadyBooked}
                             date={date}
                             t={t}
-                          />}
-                          
-                          
+                          />} */}
+                          <p style={{    marginTop: '0',
+                          fontSize: '20px',
+                          fontWeight: 'bold',
+                          marginLeft: '20px',
+                          marginBottom: '1rem',
+                          width: 'max-content'}}>
+                          Exit
+                          {RenderIcon2()}
+                          </p>
+                          {/* <p><i class="arrow left"></i><i class="arrow left"></i><i class="arrow left"></i><i class="arrow left"></i></p> */}
                           <Stall
                             data={UpdatedData.slice(26, 50)}
                             handleClick={handleClick}
@@ -1137,6 +1176,17 @@ function Test({ setbookingDetails, setValue, t }) {
                     />
                     <div className="stall-price">{t("booked")}</div>
                   </div>
+                  <div className="price-holder">
+                    <Box
+                      sx={{
+                        width: 20,
+                        height: 20,
+                        backgroundColor: "#4705fcae",
+                      }}
+                      className="stall-color"
+                    />
+                    <div className="stall-price">{t("Selected")}</div>
+                  </div>
                 </div>
                 {/* {console.log(bookedStalls)} */}
                 <Divider className="divider" />
@@ -1157,12 +1207,10 @@ function Test({ setbookingDetails, setValue, t }) {
                 <ConfirmModal t={t} status={status} setCashOnDelivery={setCashOnDelivery} confirmBooking={confirmBooking} selected={selected} />
               </div>
             ) : (
-
-              <Grid container alignItems="center" justifyContent="center">
-                <Grid item xs={6}>
                   <div style={{ display: "flex", justifyContent: "center" }}>
+                    
                     <Button
-                      style={{ width: "110px", height: "40px", paddingLeft: '5rem', paddingRight: '5rem', margin: '1rem', color: 'white', background: "linear-gradient(90deg, #07952b 41%, #0d6a02)", borderRadius: "20px", textAlign: "center", marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}
+                      style={{ width: "33%", height: "40px", paddingLeft: '5rem', paddingRight: '5rem', fontSize:'15px', color: 'white', background: "linear-gradient(90deg, #07952b 41%, #0d6a02)", borderRadius: "20px", textAlign: "center", marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}
                       onClick={() => {
                         toast.warn("Please select stalls!", {
                           position: "top-right",
@@ -1178,8 +1226,10 @@ function Test({ setbookingDetails, setValue, t }) {
                     >
                       {t("Pay")}
                     </Button>
+
+
                     <Button
-                      style={{ width: "110px", height: "40px", paddingLeft: '5rem', paddingRight: '5rem', margin: '1rem', color: 'white', background: "linear-gradient(90deg, #07952b 41%, #0d6a02)", borderRadius: "20px", textAlign: "center", marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}
+                      style={{ width: "60%%", height: "40px", marginLeft:'10px', paddingLeft: '2rem',paddingTop:'2rem', paddingBottom:'2rem', fontSize:'15px', paddingRight: '2rem', color: 'white', background: "linear-gradient(90deg, #07952b 41%, #0d6a02)", borderRadius: "20px", textAlign: "center", marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}
                       onClick={() => {
                         toast.warn("Please select stalls!", {
                           position: "top-right",
@@ -1197,8 +1247,6 @@ function Test({ setbookingDetails, setValue, t }) {
                     </Button>
 
                   </div>
-                </Grid>
-              </Grid>
 
 
             )
@@ -1206,6 +1254,7 @@ function Test({ setbookingDetails, setValue, t }) {
 
 
           </div>
+            
         </div>
       ) : (
         <Spinner />

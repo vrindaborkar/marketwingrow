@@ -5,14 +5,35 @@
   /* background-color: #C4094C; */
 }
 .home_container select{
- margin: 10px 10px 10px 22px;
+ margin: 10px 10px 0px 22px;
  width: 90px;
  height: 25px;
  font-size: larger;
  padding-top: 5px;
 }
 
+.book-btn-section {
+  padding: 0rem;
+  margin-top: 1rem;
+  margin-bottom: -2rem;
+  text-align: center;
+  line-height: 10;
+  color: #212529;
+}
 
+.book-btn-section>h1 {
+  font-size: 30px;
+  font-weight: 600;
+  font-display: block;
+  line-height: 2;
+}
+
+.book-btn-section>h2 {
+  font-size: 22px;
+  font-weight: 600;
+  font-display: block;
+  line-height: 2;
+}
 
 .first_section {
   width: 100%;
@@ -140,7 +161,7 @@
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .second_section_aboutus>p {
@@ -230,7 +251,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 
 
@@ -367,7 +388,7 @@
     padding-right: 0.5rem;
     background-color: #2a8000;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 14px;
     line-height: 1.75rem;
     text-align: center;
     border-radius: 0.25rem;
@@ -447,6 +468,7 @@
 @media (max-width: 640px) {
   .second_section_aboutus {
     font-size: 1.3rem;
+    margin-top: 2rem;
   }
 
   .first_section_header {
@@ -469,7 +491,7 @@
 }
 
 .fourth_section {
-  padding: 10rem 7rem 10rem 15rem;
+  padding: 6rem 6rem 6rem 12rem;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -544,18 +566,23 @@
 
 .measure_container {
   display: flex;
-  width: 1170px;
-  margin: auto;
-  flex-wrap: wrap;
-  margin-bottom: 7rem;
+  /* width: 1170px; */
+  overflow-x: auto;
+  margin-top: 1rem;
+  /* margin: auto; */
+  /* flex-wrap: wrap; */
+  margin-bottom: 1rem;
   padding-left: 5rem;
   
+}
+div.measure_box :hover{
+  box-shadow: #c3c7ce;
 }
 
 .measure_box {
   border-radius: 10%;
-  padding: 3% 5% 3% 5%;
-  margin: 2% 2% 4% 2%;
+  padding: 0% 5% 3% 5%;
+  margin: 2% 10% 4% 2%;
   width: 20%;
   line-height: 1.5;
   text-align: center;
@@ -576,10 +603,13 @@
 @media (max-width: 768px) {
 
   .measure_container {
-    width: 80%;
+    display: flex;
+    /* width: 80%; */
     flex-direction: row;
-    column-gap: 1px;
-    padding-left: 0px;
+    padding-left: 2rem;
+    /* column-gap: 1px; */
+    /* padding-left: 0px; */
+    margin-top: 2rem;
     margin-right: 2.5rem;
   }
 
@@ -588,8 +618,8 @@
   }
 
   .measure_box {
-    width: 12.5rem;
-    height: 13rem;
+    width: 28%;
+    height: 14rem;
   }
 
   .measure_wrapper>p {
@@ -627,11 +657,11 @@
   width: 100%;
   margin: auto;
   justify-content: space-between;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .keyfeature_section>h2 {
-  margin-top: 5rem;
+  margin-top: 1rem;
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -853,7 +883,7 @@ ol.listed li.a:before {
 }
 
 .carousel {
-  margin-bottom: 7rem;
+  margin-bottom: 0rem;
 }
 
 @media only screen and (max-width: 780px) {
@@ -895,20 +925,20 @@ ol.listed li.a:before {
   }
 
   .book-btn-section {
-    margin-top: 5rem !important;
-    padding: 2rem !important;
+    margin-top: 1rem !important;
+    padding: 1rem !important;
     margin-bottom: 0px !important;
     text-align: center;
     line-height: 5 !important;
-    color: white;
-    background: linear-gradient(91.3deg, #E03538 17.31%, #C4094C 88.09%);
+    color: #212529;
+    background: linear-gradient(91.3deg, #ddd3d42b 17.31%, #adbac645 88.09%);
   }
 
   .bookstall_btn {
     padding: 0.5rem;
     background-color: #2a8000;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 14px;
     line-height: 1.75rem;
   }
 
@@ -920,7 +950,7 @@ ol.listed li.a:before {
   }
 
   .book-btn-section>h2 {
-    font-size: 1rem !important;
+    font-size: 15px!important;
     font-weight: 600;
     font-display: block;
     line-height: 2;
@@ -957,26 +987,3 @@ ol.listed li.a:before {
 
 }
 
-.book-btn-section {
-  padding: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  line-height: 10;
-  color: white;
-  background: linear-gradient(91.3deg, #E03538 17.31%, #C4094C 88.09%);
-}
-
-.book-btn-section>h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  font-display: block;
-  line-height: 2;
-}
-
-.book-btn-section>h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  font-display: block;
-  line-height: 2;
-}

@@ -1,6 +1,6 @@
 import React ,{useState} from "react";
 import "../../styles/Test.css";
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+// import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -64,16 +64,13 @@ const Stall = ({ data, handleClick, bookedStalls, alreadyBooked, date, display,t
                 src="../../../images/stand.png"
                 alt="logo"
               />
-              <div onClick={handleClick} id={_id} key={i} className={stallClass} style={{fontSize:'0.8rem'}}>
-                {i === 2 && displayArrow ? (
+              <div onClick={handleClick} id={_id} key={i} className={stallClass} style={{fontSize:'15px'}}>
+                {/* {i === 2 && displayArrow ? (
                   <ArrowDownwardIcon className={classes.arrowIcon} />
                 ) : (
                   console.log(i)
-                )}
-                 {t(stallName)}+
-                
-                <br />
-                Rs.{stallPrice}
+                )} */}
+                 {t(stallName)}
               </div>
               {/* <div className={stallClass}> */}
 {/* 
