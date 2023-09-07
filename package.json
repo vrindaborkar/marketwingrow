@@ -34,6 +34,7 @@
     "jwt-decode": "^3.1.2",
     "libphonenumber-js": "^1.10.28",
     "mongoose": "^5.13.17",
+    "msg91": "^2.1.4",
     "nodemon": "^2.0.20",
     "razorpay": "^2.8.3",
     "react-chartjs-2": "^5.2.0",
