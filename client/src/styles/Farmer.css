@@ -230,6 +230,7 @@
 }
 
 .data_container {
+  background-image: url(../images/inward_backG.jpg);
   width: 100%;
   position: relative;
   display: flex;
@@ -311,7 +312,7 @@
 }
 
 .main_header_places {
-  margin: 3rem 2rem 0rem 2rem;
+  margin: 1rem 2rem 0rem 2rem;
   text-align: center;
   font-size: 2rem;
   color: rgb(109, 104, 104);
@@ -604,7 +605,7 @@
 
 
   .places_wrapper {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-family:  'Arturo';;
   }
 

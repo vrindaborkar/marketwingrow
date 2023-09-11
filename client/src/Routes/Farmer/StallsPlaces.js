@@ -50,7 +50,7 @@ const StallsPlaces = ({t}) => {
 
       {stalls && <div className='places_market_container'>
         <div className='backbtnflex'>
-          <Link style={{ marginTop: '10px' }} className="backbtn green flex" to="/farmers" >
+          <Link style={{ marginTop: '16px' }} className="backbtn green flex" to="/farmers" >
             {t("back")}
           </Link>
           <h2 className='main_header_places'>{t("select_market_from_below")}</h2>

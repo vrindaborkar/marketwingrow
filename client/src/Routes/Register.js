@@ -574,7 +574,7 @@ export default function Register({ t, languages }) {
                     autoComplete: 'off'
                   }}
                   InputLabelProps={{
-                    className: 'text-lg font-arturo',
+                    className: 'text-lg font-arturo',left: '17px'
                   }}
                   name="firstname"
                   value={data.firstname}
@@ -643,7 +643,7 @@ export default function Register({ t, languages }) {
                   size="large"
                   sx={{ mt: 0.5, mb: 0.5 }}
                 >
-                  <span className="heading">Fetch Otp</span>
+                  <span className="heading">Fetch</span>
                 </Button>
               </Grid>
 
@@ -693,7 +693,7 @@ export default function Register({ t, languages }) {
                   size="large"
                   sx={{ mt: 0.5, mb: 0.5 }}
                 >
-                  <span className="heading">Submit OTP</span>
+                  <span className="heading">Submit</span>
                 </Button>
               </Grid>
 

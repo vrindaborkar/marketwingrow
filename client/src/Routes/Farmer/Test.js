@@ -940,8 +940,9 @@ function Test({ setbookingDetails, setValue, t }) {
                 </InputLabel>
                 <TextField
                   // className="stall-booking-input"
+                  // sx={{width: "100%", margin: "auto"}}
                   inputlabelprops={{
-                    style: { fontSize: 14, fontFamily: "monospace" },
+                    style: {fontSize: 14, fontFamily: "monospace"},
                   }}
                   name="number-of-stalls-req"
                   required
@@ -1210,7 +1211,7 @@ function Test({ setbookingDetails, setValue, t }) {
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     
                     <Button
-                      style={{ width: "33%", height: "40px", paddingLeft: '5rem', paddingRight: '5rem', fontSize:'15px', color: 'white', background: "linear-gradient(90deg, #07952b 41%, #0d6a02)", borderRadius: "20px", textAlign: "center", marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}
+                      style={{paddingLeft: '5rem', paddingRight: '5rem', fontSize:'15px', color: 'white', background: "linear-gradient(90deg, #07952b 41%, #0d6a02)", borderRadius: "20px", textAlign: "center", marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}
                       onClick={() => {
                         toast.warn("Please select stalls!", {
                           position: "top-right",

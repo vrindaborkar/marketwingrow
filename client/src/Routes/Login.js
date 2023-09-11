@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import {Select, MenuItem} from '@mui/material'
 import Typography from "@mui/material/Typography";
 import { Link, useNavigate,useLocation } from "react-router-dom";
 import AuthService from "../services/auth.service";
@@ -255,7 +256,7 @@ export default function SignIn({date, t}) {
               <span className="heading" style={{fontweight:'bold', fontSize:'20px'}} >{t("login_here")}</span>
             </Typography>
             <TextField
-              sx={{width: "80%", marginLeft: "3rem"}}
+              sx={{width: "80%", marginLeft: "0rem"}}
               inputProps={{
                 autoComplete: 'off'
               }}
@@ -278,30 +279,54 @@ export default function SignIn({date, t}) {
               // className="textfield"
               onChange={handleChange}
             />
-            <TextField
-              sx={{width: "80%", marginLeft: "3rem"}}
-              inputProps={{
-                autoComplete: 'off'
-              }}
-
-              inputlabelprops={{
-                style: { fontSize: 16, fontFamily: 'Arturo' }, 
-              }}
-              
-              margin="normal"
-              required
-              fullWidth
-              id="role"
-              label="Role"
-              name="role"
-              value={data.role}
-              
-              autoFocus
-              color="success"
-              className="heading input"
+            <Select
+                sx={{width: "80%", marginLeft: "0rem"}}
+                    inputProps={{
+                      autoComplete: 'off'
+                    }}
+      
+                    inputlabelprops={{
+                      style: { fontSize: 16, fontFamily: 'Arturo' }, 
+                    }}
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="role"
+                    label="Role"
+                    name="role"
+                    value={data.role}
+                    autoFocus
+                    color="success"
+                    className="heading input"
               // className="textfield"
-              onChange={handleChangeRole}
-            />
+                    onChange={handleChangeRole}
+                  >
+                    {/* <MenuItem
+                      sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
+                      value=""
+                    >
+                      <em className="heading3">Select</em>
+                    </MenuItem> */}
+                    <MenuItem
+                      sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
+                      value={"farmer"}
+                    >
+                      <span className="heading3">Producer</span>
+                    </MenuItem>
+                    <MenuItem
+                      sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
+                      value={"customer"}
+                    >
+                      <span className="heading3">Consumer</span>
+                    </MenuItem>
+                    <MenuItem
+                      sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
+                      value={"employee"}
+                    >
+                      <span className="heading3">Employee</span>
+                    </MenuItem>
+
+                  </Select>
           
            
             {/* <Link className="form-link" to={"/Forgot"} variant="body2">

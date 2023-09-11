@@ -150,7 +150,7 @@ const handleSubmit1 = async (e)=>{
         <ArrowLeftIcon sx={{ color: blue[900], fontSize: 45}}></ArrowLeftIcon>
         </Link>
         <div className="leaveBox">
-          <h1>Apply for leave</h1>
+          <h1 style={{marginBottom: '15px'}}>Apply for leave</h1>
         <form
             className="register_details"
             component="form"
@@ -197,7 +197,10 @@ const handleSubmit1 = async (e)=>{
               variant="contained"
               color="success"
               size="large"
-              sx={{ mt: 3, mb: 2 }}>
+              sx={{ mt: 3, mb: 2,}}
+              style={{ right: '-58px',
+              marginTop: '17px' }}  
+                >
               Submit
             </Button>
             </Grid>

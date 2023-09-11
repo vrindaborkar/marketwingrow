@@ -113,8 +113,6 @@ const MyBookings = ({t}) => {
                           <Link className="backbtn green" to="/farmers" sx={{ m: 2 }} style={{ padding: '8px 20px 8px 20px', marginLeft: '-1100px' }}>
                               {t("back")}
                           </Link>
-                          <h1 className='booking_header'>{t("stall_bookings")}</h1>
-                          <p className='booking_para'>{t("list_of_booked_stalls")}</p>
                       </div>  
                
             </div>

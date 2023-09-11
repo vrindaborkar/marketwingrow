@@ -665,6 +665,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-top: 20px;
   font-family:  'Arturo';;
 }
+.stall-booking-input{
+  width: 90%;
+  margin: auto;
+}
 
 
 

@@ -380,7 +380,7 @@ export default function OutwardData({t}) {
       <ThemeProvider theme={theme}>
         <Container className="main" component="main" maxWidth="sm">
           <CssBaseline />
-          <Link className="backbtn green" to="/farmers" sx={{ m: 2 }} style={{marginLeft: '20px', position: 'relative', top:'15px'}}>
+          <Link className="backbtn green" to="/farmers" sx={{ m: 2 }} style={{marginLeft: '20px', marginBottom:'10px', marginTop:'0px',  position: 'relative', top:'15px'}}>
             {t("back")}
           </Link>
           <Box

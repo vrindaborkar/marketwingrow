@@ -374,7 +374,7 @@ console.log(Data)
       <ThemeProvider theme={theme}>
         <Container className="main" component="main" maxWidth="sm" sx={{width: '100%'}}>
           <CssBaseline />
-          <Link className="backbtn green" to="/farmers" sx={{ m: 2 }} style={{ padding: '8px 20px 8px 20px', marginTop: -'570px', marginLeft: '10px' }}>
+          <Link className="backbtn green" to="/farmers" sx={{ m: 2 }}>
             {t("back")}
           </Link>
           <Box
@@ -393,7 +393,7 @@ console.log(Data)
             <Typography component="h1" variant="h4" fontFamily= 'Arturo' sx={{marginBottom:'1.5rem'}}>
               {t("farmer_inward_data")} !!
             </Typography>
-            <Box component="form" onSubmit={handleSubmit} sx={{ padding: 0, marginTop: '-2.5rem', width: '100%'}}>
+            <Box component="form" onSubmit={handleSubmit} sx={{ padding: 0, marginTop: '-0.5rem', width: '100%'}}>
               <Grid container spacing={0}>
                 <Grid item xs={12} className="select_market">
                   <FormControl sx={{ width: "60%", height: "70px" }}>
