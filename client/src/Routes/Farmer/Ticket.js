@@ -13,15 +13,15 @@ function Ticket ({bookingDetails}) {
 
     useEffect(() => {
         if(!called ){
-            twilioMsg(); 
+            sendMsg91SMS(); 
         }
         
     },[called]);
     
-    const twilioMsg = async() => {
+    const sendMsg91SMS = async() => {
         // console.log("booking ",bookingDetails)
         
-        const orderUrl = REACT_APP_API_URL+"twilio"; 
+        const orderUrl = REACT_APP_API_URL+"msg91"; 
         const {data} = await axios.post(orderUrl,{bookingDetails:bookingDetails},{headers:authHeader()});
         setCalled(true)
         console.log(data)

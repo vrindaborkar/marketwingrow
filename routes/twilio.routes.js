@@ -1,52 +1,11 @@
 const express = require('express');
-// //const client = require('twilio')('ACa84acedb4869f922ee9165fbfcd0a264', '055a4b55623929289576b9dded4bc3fb');
-// const client = require('twilio')('AC15dcd6d8dfbed9a6b65a601c457d26c9', '3879e783991cd04565bff5a4a8fbea3e');
-
-
-// module.exports = function(app) {
-
-//     app.post("/twilio" , (req, res) => {
-                
-//             const farmer = req.body.bookingDetails;
-//              const phone  = String(farmer.phone)
-//             console.log("details --> ",farmer)
-//             const details = `Your Booking Details\n
-//                             Name: ${farmer['farmer']} ,
-//                             phone: ${farmer['phone']} ,
-//                             paymentDetails: ${farmer['paymentDetails']} ,
-//                             BookedStalls: ${farmer['BookedStalls']} ,
-//                             stallsBooked: ${farmer['stallsBooked']} ,
-//                             totalAmount: ${farmer['totalAmount']},
-//                             address: ${farmer['address']}
-                            
-//                             `;
-//             // console.log(details, farmer['phone']);
-            
-//          //var details = "heelloooo";
-          
-//         client.messages.create({
-//             // $body : "farmer " . $farmer  ,
-            
-//             body : details ,
-//             to: '+91' + phone,
-//             from: '+14344361718',
-//             statusCallback: 'http://postb.in/1234abcd',
-//           }).then(message => {console.log("hello ",message) ;
-//             return ;})
-//            // here you can implement your fallback code
-//            .catch(error => console.log("error:::::::",error.message))
-//     });
-// };
-
-
-// 
 const msg91 = require('msg91');
 
 // Replace 'YOUR_MSG91_API_KEY' with your actual MSG91 API key
-const msg91AuthKey = 'YOUR_MSG91_API_KEY';
+const msg91AuthKey = '400149AHIjVcSrW64b7ce78P1';
 
 module.exports = function (app) {
-  app.post('/msg91', (req, res) => {
+  app.post("/msg91", (req, res) => {
     try {
       const farmer = req.body.bookingDetails;
       const phone = String(farmer.phone);
@@ -62,14 +21,21 @@ module.exports = function (app) {
         Total Amount: ${farmer.totalAmount}
         Address: ${farmer.address}`;
 
+      // Format the phone number correctly
+      const formattedPhone = '+91' + phone;
+
       // SMS data
       const smsData = {
         authkey: msg91AuthKey,
-        mobiles: ['+91'+phone], // Phone numbers should be an array of strings
+        mobiles: [formattedPhone], // Phone numbers should be an array of strings
         message: message,
         sender: 'WINGRW', // Replace with your sender ID (optional)
         route: 4, // Transactional route for OTP messages
       };
+
+      // Log formatted phone and message
+      console.log('Formatted Phone:', formattedPhone);
+      console.log('Message:', message);
 
       // Send SMS using MSG91
       msg91.send(smsData, function (err, response) {
