@@ -5,77 +5,95 @@ import Spinner from "../../components/Spinner";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import authHeader from '../../services/auth.headers';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import generatePDF from './generatePDF';
 // import NavMenu from "../../components/NavMenu";
 import useWindowDimensions from "../../components/useWindowDimensions";
-function Ticket ({bookingDetails}) {
-    const [called,setCalled] = useState(false)
+function Ticket({ bookingDetails }) {
+    const [called, setCalled] = useState(false)
     const { REACT_APP_API_URL } = process.env;
 
     useEffect(() => {
-        if(!called ){
-            sendMsg91SMS(); 
+        if (!called) {
+            sendMsg91SMS();
         }
-        
-    },[called]);
-    
-    const sendMsg91SMS = async() => {
+
+    }, [called]);
+
+    const  sendMsg91SMS= async () => {
         // console.log("booking ",bookingDetails)
-        
-        const orderUrl = REACT_APP_API_URL+"msg91"; 
-        const {data} = await axios.post(orderUrl,{bookingDetails:bookingDetails},{headers:authHeader()});
-        console.log(orderUrl)
+
+        const orderUrl = REACT_APP_API_URL + "msg91";
+        const { data } = await axios.post(orderUrl, { bookingDetails: bookingDetails }, { headers: authHeader() });
         setCalled(true)
         console.log(data)
     }
-    const {BookedStalls} = bookingDetails
-    const navigate = useNavigate()
-    const bookStr = BookedStalls?.toString();
-    const [mobile, setmobile] = useState(false)
 
-    const { width } = useWindowDimensions()
+    const pdfRef = useRef();
 
-    useEffect(() => {
-        if (width < 850) {
-            setmobile(true)
-        } else {
-            setmobile(false)
-        }
-    }, [width])
-    return (
-        <>
-        {bookingDetails ? <div className="invoice-box">
+  const downloadPDF = async () => {
+    const content = pdfRef.current;
+
+    const pdfBlob = await generatePDF(content);
+
+    if (pdfBlob) {
+      const url = URL.createObjectURL(pdfBlob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'download.pdf';
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+  }
+
+
+const { BookedStalls } = bookingDetails
+const navigate = useNavigate()
+const bookStr = BookedStalls?.toString();
+const [mobile, setmobile] = useState(false)
+
+const { width } = useWindowDimensions()
+
+useEffect(() => {
+    if (width < 850) {
+        setmobile(true)
+    } else {
+        setmobile(false)
+    }
+}, [width])
+return (
+    <>
+        <button className="btn btn-primary" onClick={downloadPDF}>Download PDF</button>
+        {bookingDetails ? <div className="invoice-box" ref={pdfRef}>
+
             <h2 className="thanks">Stall booking details</h2>
-            <br/>
+            <br />
             <div className="invoice_details">
                 <div>Farmer Name : {bookingDetails.farmer}</div>
-                <br/>
+                <br />
                 <div>Phone : {bookingDetails.phone}</div>
-                <br/>
+                <br />
                 <div>No. of Stalls Booked :{bookingDetails.stallsBooked}</div>
-                <br/>
+                <br />
                 <div>Stalls Booked : {bookStr}</div>
-                <br/>
+                <br />
                 <div>Payment Id : {bookingDetails.paymentDetails}</div>
-                <br/>
+                <br />
                 <div>Addess : {bookingDetails.address}</div>
-                <br/>
+                <br />
                 <div>Total Amount : {bookingDetails.totalAmount}</div>
-                <br/>
+                <br />
             </div>
             <h2 className="thanks">Thank You !</h2>
             <div className="bookings_buttons">
-                <button onClick={()=>{navigate('/farmers/stallplaces')}} className="btns_bookings">Continue Booking</button>
-                <button onClick={()=>{navigate('../mybookings')}} className="btns_bookings">Check booked stalls</button>
+                <button onClick={() => { navigate('/farmers/stallplaces') }} className="btns_bookings">Continue Booking</button>
+                <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Check booked stalls</button>
             </div>
-  
-            <div className="bookings_buttons">
-            <button onClick={()=>{navigate('/farmers/inward')}} className="btns_bookings">Fill Inward Data</button>
-            <button onClick={()=>{navigate('/farmers/outward')}} className="btns_bookings">Fill Outward Data</button>
-            </div>
-        </div> : <Spinner/>}
-           
-        </> 
-     );
+        </div> : <Spinner />}
+
+    </>
+);
 }
 
-export default Ticket  ;
+export default Ticket;
