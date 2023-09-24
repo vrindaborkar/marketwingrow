@@ -23,6 +23,7 @@ function Ticket ({bookingDetails}) {
         
         const orderUrl = REACT_APP_API_URL+"msg91"; 
         const {data} = await axios.post(orderUrl,{bookingDetails:bookingDetails},{headers:authHeader()});
+        console.log(orderUrl)
         setCalled(true)
         console.log(data)
     }
