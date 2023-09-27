@@ -155,6 +155,24 @@ const Home = ({ t, languages }) => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <div data-aos="fade-right" className="transimg">
+        <img src="./images/transpic.png" alt="Skytsunami" />
+      </div>
+      <div className='third_section'>
+        <div className="third_section_details">
+          <h1 className="third_section_header">{t('our_market_heading')}</h1>
+          <p className="third_section_p">{t('our_market')}</p>
+        </div>
+        <div className='location_component'>
+          <Location
+            t={t}
+          />
+        </div>
+        
+        {/* {mobile?
+        <NavMenu
+       />:console.log("hi")} */}
+      </div>
       
       <div data-aos="fade-left" className="transimgr">
         <img src="./images/raspberry.png" alt="Skytsunami" />
@@ -268,26 +286,11 @@ const Home = ({ t, languages }) => {
             t={t}
           />
         </div>
-      </div>
-      <div data-aos="fade-right" className="transimg">
-        <img src="./images/transpic.png" alt="Skytsunami" />
-      </div>
-
-      <div className='third_section'>
-        <div className="third_section_details">
-          <h1 className="third_section_header">{t('our_market_heading')}</h1>
-          <p className="third_section_p">{t('our_market')}</p>
-        </div>
-        <div className='location_component'>
-          <Location
-            t={t}
-          />
-        </div>
         <Footer />
-        {/* {mobile?
-        <NavMenu
-       />:console.log("hi")} */}
       </div>
+      
+
+      
 
     </div>
 
