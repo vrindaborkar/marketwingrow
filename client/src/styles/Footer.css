@@ -192,7 +192,7 @@ a {
 /* Footer Center */
 
 .footer-distributed .footer-center{
-	width: 35%;
+	width: 30%;
 }
 
 .footer-distributed .footer-center i{
@@ -251,6 +251,7 @@ a {
 
 .footer-distributed .footer-right{
 	width: 20%;
+    
 }
 
 .footer-distributed .footer-company-about{
@@ -304,12 +305,21 @@ a {
 	.footer-distributed .footer-right{
 		display: block;
 		width: 100%;
-		margin-bottom: 40px;
+		margin-bottom: 10px;
 		text-align: center;
 	}
+    .footer-distributed .footer-center{
+        margin-left: -13px;
+    }
 
 	.footer-distributed .footer-center i{
 		margin-left: 0;
 	}
 
+}
+@media (min-width: 1000px) {
+    .footer-distributed .footer-right{
+        
+        margin-left: 45px;
+    }
 }
