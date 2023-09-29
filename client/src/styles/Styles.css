@@ -510,7 +510,6 @@ li {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          height: 2rem;
           width: max-content;
           margin-top: 2.5rem;
         }
