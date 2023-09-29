@@ -53,7 +53,7 @@ const StallsPlaces = ({t}) => {
           <Link style={{ marginTop: '16px' }} className="backbtn green flex" to="/farmers" >
             {t("back")}
           </Link>
-          <h2 className='main_header_places'>{t("select_market_from_below")}</h2>
+          <h2 className='main_header_places'>{t("Select Market From Pune..")}</h2>
         </div>
 
         <div className='places_wrapper'>
