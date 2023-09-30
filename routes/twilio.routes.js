@@ -37,7 +37,7 @@ const req = http.request(options, function (res) {
 req.write(JSON.stringify({
   template_id: "64f2f11fd6fc0539611644c2",
   short_url: '1 (On) or 0 (Off)',
-  recipients: [{mobiles: '+917498102446', VAR1: 'Vaibhavi', VAR2: 'V'}]
+  recipients: [{mobiles: '918169676725', name: 'Vaibhavi', pdflink: 'V'}]
 }));
 req.end();
 } catch (err) {

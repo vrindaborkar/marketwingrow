@@ -3,22 +3,17 @@ import '../styles/Home.css'
 
 function Location({t}) {
     const locations = [
-    {
-        name: t("amanora_city_location"),
-        day:t("sunday"),
-        address:"https://goo.gl/maps/HHMD4DHv7RgUXGj8A",
-        time:"3PM-9PM"
-    },
-    {
-        name: t("magarpatta_location"),
-        day:t("sunday"),
-        address:"https://goo.gl/maps/vedWovkK1J3z5gkL6",
-        time:"7AM-1PM"
-    },
+   
     {
         name:t("karvenagar_location"),
         day:t("tuesday"),
         address:"https://goo.gl/maps/5sETcJGzXWoXC5SG9",
+        time:"3PM-9PM"
+    },
+    {
+        name:t("Kondhwa BK"),
+        day:t("tuesday"),
+        address:"https://maps.app.goo.gl/c2mXLzmGgk3jfYEt5?g_st=iw",
         time:"3PM-9PM"
     },
     {
@@ -27,6 +22,7 @@ function Location({t}) {
         address:"https://maps.app.goo.gl/bh7wNdiyVWcvy15p9?g_st=iw",
         time:"3PM-9PM"
     },
+
     {
         name: t("Undri"),
         day:t("wednesday"),
@@ -58,9 +54,28 @@ function Location({t}) {
         time:"3PM-9PM"
     },
         {
-        name: t("Aditya Nandanvan"),
+        name: t("Bhavadi Road"),
         day:t("saturday"),
         address:"https://maps.app.goo.gl/9HjB62BsjYVF4Ehg6?g_st=iw",
+        time:"3PM-9PM"
+    },
+
+    {
+        name: t("magarpatta_location"),
+        day:t("sunday"),
+        address:"https://goo.gl/maps/vedWovkK1J3z5gkL6",
+        time:"7AM-1PM"
+    },
+    {
+        name: t("amanora_city_location"),
+        day:t("sunday"),
+        address:"https://goo.gl/maps/HHMD4DHv7RgUXGj8A",
+        time:"3PM-9PM"
+    },
+    {
+        name: t("Green City"),
+        day:t("sunday"),
+        address:"https://maps.app.goo.gl/c2mXLzmGgk3jfYEt5?g_st=iw",
         time:"3PM-9PM"
     },
 

@@ -4,7 +4,7 @@ import FarmerService from '../../services/farmer.service'
 import '../../styles/Farmer.css'
 import Spinner from '../../components/Spinner'
 import useWindowDimensions from '../../components/useWindowDimensions'
-import NavMenu from '../../components/NavMenu'
+// import NavMenu from '../../components/NavMenu'
 
 const StallsPlaces = ({t}) => {
   const [stalls, setStalls] = useState()

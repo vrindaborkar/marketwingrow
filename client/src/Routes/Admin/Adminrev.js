@@ -47,7 +47,7 @@ const Adminrev = ({filterIn,filterOut,
 }) => {
   // console.log("in-->",filterIn)
   // console.log("out--->",filterOut)
-  const markets = { 'Hadapsar': 3, 'Kharadi IT Park': 4, 'Karve Nagar': 2, 'Bramhasun City': 5, 'Wanawadi': 6, 'Magarpatta': 0, 'Amanora City': 0, 'Wagholi':5, 'NIMB':6 }
+  const markets = { 'Karve Nagar': 2, 'Kondhwa BK':2, 'Hadapsar': 3, 'Undri':3, 'Kharadi IT Park': 4,  'Bramhasun City': 5, 'Wagholi':5, 'Bhavadi Road':6, 'Green City': 0, 'Magarpatta': 0, 'Amanora City': 0 }
   //const markets = { 'Hadapsar': 0, 'Kharadi IT Park': 0, 'Karve Nagar': 0, 'Bramhasun City': 0, 'wanawadi': 0, 'Magarpatta': 0, 'Amanora City': 0 }
   const [date,setDate] = useState(dayjs(new Date()).format("DD/MM/YYYY"))
   const[month,setMonth] = useState()
@@ -172,7 +172,7 @@ const Adminrev = ({filterIn,filterOut,
     
     }
     var data = {
-      labels: ['Hadapsar', 'Kharadi IT Park', 'Karve Nagar','Bramhasun City','Wanawadi','Magarpatta','Amanora City','Wagholi','NIBM'],
+      labels: ['Karve Nagar', 'Kondhwa BK','Hadapsar', 'Undri', 'Kharadi IT Park', ,'Bramhasun City','Wagholi', ,'Bhavadi Road','Magarpatta','Amanora City','Green City'],
       datasets: [
         {
           label: 'Data',

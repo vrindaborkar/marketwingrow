@@ -319,12 +319,12 @@ export default function SignIn({date, t}) {
                     >
                       <span className="heading3">Consumer</span>
                     </MenuItem>
-                    <MenuItem
+                    {/* <MenuItem
                       sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
                       value={"employee"}
                     >
                       <span className="heading3">Employee</span>
-                    </MenuItem>
+                    </MenuItem> */}
 
                   </Select>
           

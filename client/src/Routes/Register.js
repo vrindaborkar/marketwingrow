@@ -738,12 +738,12 @@ export default function Register({ t, languages }) {
                     >
                       <span className="heading">Consumer</span>
                     </MenuItem>
-                    <MenuItem
+                    {/* <MenuItem
                       sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
                       value={"employee"}
                     >
                       <span className="heading">Employee</span>
-                    </MenuItem>
+                    </MenuItem> */}
 
                   </Select>
                 </FormControl>

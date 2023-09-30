@@ -26,16 +26,18 @@ const theme = createTheme();
 export default function OutwardData({t}) {
 
   const locations = [
-    { location: t("hadapsar_location") },
-
     { location: t("karvenagar_location") },
+    { location: t("Kondhwa") },
+    { location: t("hadapsar_location") },
+    { location: t("Undri") },   
     { location: t("kharadi_it_park_location") },
-    { location: t("wanwadi_location") },
-    { location: t("magarpatta_location") },
-    { location: t("amanora_city_location") },
     { location: t("bramhasun_city_location") },
     { location: t("wagholi_location") },
-    { location: t("nibm_location") },
+    { location: t("Bhavadi Road") },
+    { location: t("magarpatta_location") },
+    { location: t("amanora_city_location") },
+    { location: t("Green City") },
+
   ];
 
   const options = [
