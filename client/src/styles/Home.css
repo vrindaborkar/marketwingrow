@@ -566,12 +566,10 @@
 
 .measure_container {
   display: flex;
-  /* width: 1170px; */
-  overflow-x: auto;
-  margin-top: 1rem;
-  /* margin: auto; */
-  /* flex-wrap: wrap; */
-  margin-bottom: 1rem;
+  width: 1170px;
+  margin: auto;
+  flex-wrap: wrap;
+  margin-bottom: 7rem;
   padding-left: 5rem;
   
 }
@@ -581,8 +579,8 @@ div.measure_box :hover{
 
 .measure_box {
   border-radius: 10%;
-  padding: 0% 5% 3% 5%;
-  margin: 2% 10% 4% 2%;
+  padding: 3% 5% 3% 5%;
+  margin: 2% 2% 4% 2%;
   width: 20%;
   line-height: 1.5;
   text-align: center;
@@ -603,13 +601,10 @@ div.measure_box :hover{
 @media (max-width: 768px) {
 
   .measure_container {
-    display: flex;
-    /* width: 80%; */
+    width: 80%;
     flex-direction: row;
-    padding-left: 2rem;
-    /* column-gap: 1px; */
-    /* padding-left: 0px; */
-    margin-top: 2rem;
+    column-gap: 1px;
+    padding-left: 0px;
     margin-right: 2.5rem;
   }
 
