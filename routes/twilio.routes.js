@@ -29,7 +29,7 @@ module.exports = function (app) {
           console.log(body.toString());
         });
       });
-      const phone = "+91"+ String(farmer.phone);
+      const phone = "91"+ String(farmer.phone);
       request.write(JSON.stringify({
         template_id: "64f2f11fd6fc0539611644c2",
         short_url: '1 (On) or 0 (Off)',

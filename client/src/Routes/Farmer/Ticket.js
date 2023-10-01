@@ -64,7 +64,7 @@ useEffect(() => {
 }, [width])
 return (
     <>
-        <button className="btn btn-primary" onClick={downloadPDF}>Download PDF</button>
+        
         {bookingDetails ? <div className="invoice-box" ref={pdfRef}>
 
             <h2 className="thanks">Stall booking details</h2>
@@ -89,6 +89,7 @@ return (
             <div className="bookings_buttons">
                 <button onClick={() => { navigate('/farmers/stallplaces') }} className="btns_bookings">Continue Booking</button>
                 <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Check booked stalls</button>
+                <button onClick={downloadPDF}className="btns_bookings">Download PDF</button>
             </div>
         </div> : <Spinner />}
 

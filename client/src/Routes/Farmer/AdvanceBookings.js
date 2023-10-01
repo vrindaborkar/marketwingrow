@@ -17,7 +17,7 @@ import dayjs from "dayjs";
 import { ToastContainer, toast } from "react-toastify";
 import { TextField, Typography } from "@mui/material";
 import "react-toastify/dist/ReactToastify.css";
-import SelectSeatModal from "../../components/SelectSeatModal";
+// import SelectSeatModal from "../../components/SelectSeatModal";
 import Box from "@mui/material/Box";
 import { Divider } from "@mui/material";
 import { Button} from "@mui/material";
@@ -29,15 +29,17 @@ console.log(today.getDate() + 1)
 const replacement = today.getDate() + 1;
 const todayFormatted = today.toISOString().slice(0, 10);
 const locations = [
-  { location: "Hadapsar" },
-  { location: "Karve Nagar" },
-  { location: "Kharadi IT Park" },
-  { location: "Wanawadi" },
-  { location: "Magarpatta" },
-  { location: "Amanora City" },
-  { location: "Bramhasun City" },
-  { location: "Wagholi" },
-  { location: "NIBM" },
+  { location: "karvenagar_location" },
+  { location: "Kondhwa BK"},
+  { location: "hadapsar_location"},
+  { location: "Undri"},   
+  { location: "kharadi_it_park_location"},
+  { location: "bramhasun_city_location"},
+  { location: "wagholi_location"},
+  { location: "Bhavadi Road"},
+  { location: "magarpatta_location"},
+  { location: "amanora_city_location"},
+  { location: "Green City"},
 
 ];
 

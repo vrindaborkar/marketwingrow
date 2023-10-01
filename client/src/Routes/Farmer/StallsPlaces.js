@@ -4,7 +4,7 @@ import FarmerService from '../../services/farmer.service'
 import '../../styles/Farmer.css'
 import Spinner from '../../components/Spinner'
 import useWindowDimensions from '../../components/useWindowDimensions'
-import NavMenu from '../../components/NavMenu'
+// import NavMenu from '../../components/NavMenu'
 
 const StallsPlaces = ({t}) => {
   const [stalls, setStalls] = useState()
@@ -53,7 +53,7 @@ const StallsPlaces = ({t}) => {
           <Link style={{ marginTop: '16px' }} className="backbtn green flex" to="/farmers" >
             {t("back")}
           </Link>
-          <h2 className='main_header_places'>{t("select_market_from_below")}</h2>
+          <h2 className='main_header_places'>{t("Select Market From Pune..")}</h2>
         </div>
 
         <div className='places_wrapper'>
