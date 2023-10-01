@@ -24,6 +24,8 @@ const style = {
   p: 1.5,
 };
 
+
+
 export default function ConfirmModal({ confirmBooking,setCashOnDelivery,selected,status,t }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -104,7 +106,8 @@ export default function ConfirmModal({ confirmBooking,setCashOnDelivery,selected
           
         
           <div className="terms_and_conditions">
-            <button className="closebtn" onClick={handleClose}>              &times;
+            <button className="closebtn" onClick={handleClose}>           
+               &times;
             </button>
             
             <h1>{t("Terms_of_service")}</h1>

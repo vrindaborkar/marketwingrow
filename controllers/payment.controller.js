@@ -1,71 +1,51 @@
-const Razorpay = require('razorpay');
+const Insta = require('instamojo-nodejs');
 const crypto = require('crypto');
 //order Api
 const ordersApi = async(req,res)=>
 {
-    try {
-        const instance = new Razorpay({
-            key_id:process.env.KEY_ID,
-            key_secret:process.env.KEY_SECRET
-        });
+    Insta.setKeys('7038816d889a1d9598016bb4801f87fd', 'e22abfc3f0358d917cbd41d182a5911a')
+    const data=new Insta.PaymentData();
 
-        const options = ({
-            amount:req.body.amount,
-            currency:"INR"
-        })
+    data.purpose=req.body.purpose;
+    data.amount=req.body.amount;
+    data.buyer_name=req.body.buyer_name;
+    data.redirect_url=req.body.redirect_url;
+    data.email=req.body.email;
+    data.phone=req.body.phone;
+    data.send_email=false;
+    data.webhook='http://www.example.com/webhook/';
+    data.send_sms=false;
+    data.allow_repeated_payments=false;
+    data.currency=req.body.currency;
 
-        instance.orders.create(options,(error , order)=>{
-            if(error){
-                console.log(error);
-                return res.status(500).json({message:'Something went wrong'});
-            }
-            res.status(200).json({data:order})
-        })
+    Insta.createPayment(data, function(error, response){
+        if(error){
 
-    } catch (error) {
-        console.log(error)
-        res.status(500).json({message:"internal error occured"})
-    }
-}
-
-
-//payment verify api
-
-const verifypayment = async(req,res)=>
-{
-    try {
-        const {
-            razorpay_order_id,
-            razorpay_payment_id,
-            razorpay_signature
-        } = req.body
-
-        const sign = razorpay_order_id + "|" + razorpay_payment_id;
-        const expectedSign = crypto.createHmac("sha256",process.env.KEY_SECRET)
-        .update(sign.toString())
-        .digest("hex");
-
-        if(razorpay_signature===expectedSign)
-
-        {
-            res.status(200).json({message:"payment verification succesful",orderId:razorpay_order_id})
         }
-        else
-        {
-            return res.status(500).json({message:"payment failed"})
+        else{
+            console.log(response);
+            const responseData=JSON.parse(response);
+            const redirectUrl=responseData.payment_request.longurl;
+            console.log(redirectUrl);
+            res.status(200).json(redirectUrl);
         }
+    });
 
-    } catch (error) 
-    {
-        console.log(error)
-        res.status(500).json({message:"internal error"})
-    }
+    // app.get('callback/',(req,res)=>{
+    //     const url=require('url');
+    //     let url_parts=url.parse(req.url,true);
+    //     responseData=url.url_parts.query;
+
+    //     if(responseData.payment_id){
+            
+    //     }
+    // })
+
 }
 
 
 const controller = {
-    ordersApi,
-    verifypayment
+    ordersApi
 }
 
 module.exports = controller;

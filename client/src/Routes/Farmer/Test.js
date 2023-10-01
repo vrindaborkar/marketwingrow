@@ -416,6 +416,7 @@ function Test({ setbookingDetails, setValue, t }) {
 
   }
 
+
   const confirmBooking = async (e) => {
     
     //IF STATUS = TRUE , THEN DECREASE THE AVAILABLE STALLS , BY UPDATING
@@ -484,20 +485,36 @@ function Test({ setbookingDetails, setValue, t }) {
           });
           return;
         }
-        try {
-          const orderUrl = REACT_APP_API_URL+"order";
-          const { data } = await axios.post(
-            orderUrl,
-            { amount: price * 100 },
-            { headers: authHeader() }
-          );
-          initPayment(data.data);
-        } catch (error) {
-          //console.log(error);
-        }
-      }
-      console.length(bookedStalls.length)
-    }
+           try {
+                  const data = {
+                    purpose: "Product name", // REQUIRED
+                    amount: price, // REQUIRED and must be > ₹3 (3 INR)
+                    currency: "INR",
+                    buyer_name: userCurr.name,
+                    email: userCurr.email,
+                    phone: userCurr.phone,
+                    send_email: false,
+                    send_sms: false,
+                    allow_repeated_payments: false,
+                    webhook: "",
+                    redirect_url: `http://localhost:3000/farmers/stallplaces/stalls/callback?user_id=${userCurr.id}}`,
+                  };
+                  const orderUrl = REACT_APP_API_URL+"pay";
+                  await axios.post(
+                    orderUrl,
+                    data, { headers: authHeader() })
+                  .then((res)=>{
+                      console.log(res.data);
+                      initPayment(res.data);
+                      window.location.href = res.data;
+                  })
+                  .catch ((error)=> console.log(error.response.data)); 
+                  //console.log(error);
+                } catch (error) {
+                  //console.log(error);
+                }
+              }
+            }
     else {
       // console.log('in')
       toast.warn(t("please_select_stalls")+"!", {
@@ -526,7 +543,6 @@ function Test({ setbookingDetails, setValue, t }) {
       handler: async (response) => {
 
         try {
-
           var orderId;
           if (!cashOnDelivery) {
             const verifyUrl = REACT_APP_API_URL+"verify";
@@ -611,8 +627,7 @@ function Test({ setbookingDetails, setValue, t }) {
         color: "#3399cc",
       },
     };
-    const rzp = new window.Razorpay(options);
-    rzp.open();
+    
   };
 // useEffect(()=>{
 // setBookedStalls(bookedStalls)

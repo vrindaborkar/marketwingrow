@@ -10,6 +10,6 @@ module.exports = function(app) {
     next();
   });
 
-  app.post("/order",[authJwt.verifyToken], controller.ordersApi)
-  app.post("/verify" , [authJwt.verifyToken] , controller.verifypayment);
+  app.post("/pay",[authJwt.verifyToken], controller.ordersApi)
+  app.post("/verify" , [authJwt.verifyToken]);
 };
