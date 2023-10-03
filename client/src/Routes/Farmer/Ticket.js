@@ -5,8 +5,8 @@ import Spinner from "../../components/Spinner";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import authHeader from '../../services/auth.headers';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+// import jsPDF from 'jspdf';
+// import html2canvas from 'html2canvas';
 import generatePDF from './generatePDF';
 // import NavMenu from "../../components/NavMenu";
 import useWindowDimensions from "../../components/useWindowDimensions";
@@ -67,7 +67,7 @@ return (
         
         {bookingDetails ? <div className="invoice-box" ref={pdfRef}>
 
-            <h2 className="thanks">Stall booking details</h2>
+            <h2 className="thanks">Stall Booking Details</h2>
             <br />
             <div className="invoice_details">
                 <div>Farmer Name : {bookingDetails.farmer}</div>
@@ -85,11 +85,11 @@ return (
                 <div>Total Amount : {bookingDetails.totalAmount}</div>
                 <br />
             </div>
-            <h2 className="thanks">Thank You !</h2>
+            <h2 className="thanks">Thank You For Booking Your Stall in Wingrow Market !</h2>
             <div className="bookings_buttons">
                 <button onClick={() => { navigate('/farmers/stallplaces') }} className="btns_bookings">Continue Booking</button>
                 <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Check booked stalls</button>
-                <button onClick={downloadPDF}className="btns_bookings">Download PDF</button>
+                <button onClick={downloadPDF}className="btns_bookings">Download Ticket</button>
             </div>
         </div> : <Spinner />}
 

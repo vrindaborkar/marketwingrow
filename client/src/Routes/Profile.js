@@ -4,7 +4,7 @@ import UserService from "../services/user.service";
 import Spinner from '../components/Spinner'
 import AuthService from "../services/auth.service";
 // import NavMenu from "../components/NavMenu";
-import useWindowDimensions from "../components/useWindowDimensions";
+// import useWindowDimensions from "../components/useWindowDimensions";
 const Profile = ({t}) => {
   const [user , setuser] = useState();
   const [Loading, setLoading] = useState(false)

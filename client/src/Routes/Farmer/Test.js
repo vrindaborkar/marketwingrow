@@ -88,7 +88,7 @@ function Test({ setbookingDetails, setValue, t }) {
   const [selected, setSelected] = useState([]);
   const [weekId, setWeekId] = useState(0)
   const arr = { 'Karve Nagar': 2, 'Kondhwa BK':2, 'Hadapsar': 3, 'Undri':3, 'Kharadi IT Park': 4,  'Bramhasun City': 5, 'Wagholi':5, 'Bhavadi Road':6, 'Green City': 0, 'Magarpatta': 0, 'Amanora City': 0 }
-  const weekdays = ['tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+  const weekdays = ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
   const API_URL = "https://wingrowmarket.com:8443/";
   const [isMobile, setIsMobile] = useState(false);
   // useEffect(()=>{

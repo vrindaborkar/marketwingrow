@@ -132,7 +132,7 @@ const FarmersHome = ({t}) => {
     { location: t("Kondhwa BK") },
     { location: t("hadapsar_location") },
     { location: t("Undri") },   
-    { location: t("kharadi_it_park_location") },
+    { location: t("kharadi_iT_park_location") },
     { location: t("bramhasun_city_location") },
     { location: t("wagholi_location") },
     { location: t("Bhavadi Road") },
@@ -1037,7 +1037,7 @@ console.log(cumulativeData['Hadapsar']['totalNetProfit'])
                     <p>{t("monday")}    : None</p>
                     <p>{t("tuesday")}   : {t("karvenagar_location")},{t("Kondhwa BK")}</p>
                     <p>{t("wednesday")} : {t("hadapsar_location")}, {t("Undri")}</p>
-                    <p>{t("thursday")}  :  {t("kharadi_it_park_location")}</p>
+                    <p>{t("thursday")}  :  {t("kharadi_iT_park_location")}</p>
                     <p>{t("friday")}    : {t("bramhasun_city_location")}, {t("wagholi_location")} </p>
                     <p>{t("saturday")}  : {t("Bhavadi Road")}</p>
                     <p>{t("sunday")}    : {t("magarpatta_location")}, {t("amanora_city_location")}, {t("Green City")}</p>

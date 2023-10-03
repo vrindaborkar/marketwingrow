@@ -30,7 +30,7 @@ export default function OutwardData({t}) {
     { location: t("Kondhwa") },
     { location: t("hadapsar_location") },
     { location: t("Undri") },   
-    { location: t("kharadi_it_park_location") },
+    { location: t("kharadi_iT_park_location") },
     { location: t("bramhasun_city_location") },
     { location: t("wagholi_location") },
     { location: t("Bhavadi Road") },
