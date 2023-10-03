@@ -10,7 +10,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "../../styles/Farmer.css";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import InputLabel from "@mui/material/InputLabel";
+// import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import dayjs from "dayjs";
 import FarmerService from "../../services/farmer.service";
@@ -27,7 +27,7 @@ export default function OutwardData({t}) {
 
   const locations = [
     { location: t("karvenagar_location") },
-    { location: t("Kondhwa") },
+    { location: t("Kondhwa BK") },
     { location: t("hadapsar_location") },
     { location: t("Undri") },   
     { location: t("kharadi_iT_park_location") },
