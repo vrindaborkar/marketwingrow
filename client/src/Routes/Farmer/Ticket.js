@@ -66,7 +66,7 @@ return (
     <>
         
         {bookingDetails ? <div className="invoice-box" ref={pdfRef}>
-
+            <img src="../images/logo.png" alt="log" width="128" height="128"  />
             <h2 className="thanks">Stall booking details</h2>
             <br />
             <div className="invoice_details">
