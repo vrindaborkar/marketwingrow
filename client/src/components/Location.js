@@ -30,7 +30,7 @@ function Location({t}) {
         time:"3PM-9PM"
     },
     {
-        name: t("Kharadi"),
+        name: t("Kharadi IT Park"),
         day:t("thursday"),
         address:"https://g.page/Forest-County-Kharadi?share",
         time:"3PM-9PM"

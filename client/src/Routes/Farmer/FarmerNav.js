@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../../styles/Farmer.css";
 import useWindowDimensions from "../../components/useWindowDimensions";
 import { useIdleTimer } from 'react-idle-timer';
-import NavMenu from "../../components/NavMenu";
+// import NavMenu from "../../components/NavMenu";
 
 const FarmerNav = () => {
   const [close, setClose] = useState(true);
