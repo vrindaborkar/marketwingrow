@@ -65,11 +65,12 @@ useEffect(() => {
 return (
     <>
         
-        {bookingDetails ? <div className="invoice-box" ref={pdfRef}>
+        {bookingDetails ? <div><div className="invoice-box" ref={pdfRef}>
             <img src="../images/logo.png" alt="log" width="128" height="128"  />
             <h2 className="thanks">Stall booking details</h2>
             <br />
-            <div className="invoice_details">
+            <div className="invoice_details" >
+                {/* <img src="../images/logo.png" alt="log" width="128" height="128" float="right" /> */}
                 <div>Farmer Name : {bookingDetails.farmer}</div>
                 <br />
                 <div>Phone : {bookingDetails.phone}</div>
@@ -86,12 +87,13 @@ return (
                 <br />
             </div>
             <h2 className="thanks">Thank You !</h2>
-            <div className="bookings_buttons">
+            
+        </div>
+        <div className="bookings_buttons" >
                 <button onClick={() => { navigate('/farmers/stallplaces') }} className="btns_bookings">Continue Booking</button>
                 <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Check booked stalls</button>
                 <button onClick={downloadPDF}className="btns_bookings">Download PDF</button>
-            </div>
-        </div> : <Spinner />}
+            </div></div> : <Spinner />}
 
     </>
 );

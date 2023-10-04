@@ -10,6 +10,7 @@ const StallsPlaces = ({t}) => {
   const [stalls, setStalls] = useState()
   const set = new Set();
   const places = [];
+  const day = ["tuesday","tuesday","wednesday","wednesday","thursday","friday","friday","saturday","saturday","sunday","sunday","sunday"]
   const navigate = useNavigate()
 
 
@@ -19,7 +20,11 @@ const StallsPlaces = ({t}) => {
     }
   }
 
-  for (let key of set) places.push(key)
+  for (let key of set){ 
+    places.push(key);
+    console.log(places[0]);
+
+  }
 
   useEffect(() => {
     FarmerService.getMyStalls()
@@ -64,7 +69,7 @@ const StallsPlaces = ({t}) => {
                   <img id={e} alt='logo' className='image_1' src="../images/4.webp" />
                   <div id={e}>
                   {console.log(e)}
-                    <span id={e} className='places_headers'>{t("markets_in")} <br />{t(e)}</span>
+                    <span id={e} className='places_headers'>{t("markets_in")} <br />{t(e)} <br/>{day[i]}</span>
                   </div>
                 </div>
               )
