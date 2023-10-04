@@ -101,7 +101,7 @@ const FarmersHome = ({t}) => {
   }, [width])
   // console.log(InwardData)
 
-  const arr = { 'Karve Nagar': 2, 'Kondhwa BK':2, 'Hadapsar': 3, 'Undri':3, 'Kharadi IT Park': 4,  'Bramhasun City': 5, 'Wagholi':5, 'Bhavadi Road':6, 'Green City': 0, 'Magarpatta': 0, 'Amanora City': 0 }
+  const arr = { 'Karve Nagar': 2, 'Kondhwa BK':2, 'Hadapsar': 3, 'Undri':3, 'Kharadi IT Park': 4,  'Bramhasun City': 5, 'Wagholi':5, 'Bhavadi Road':6,'Amanora City': 7,'Magarpatta':7,'Green City':7}
 
 
   const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -132,7 +132,7 @@ const FarmersHome = ({t}) => {
     { location: t("Kondhwa BK") },
     { location: t("hadapsar_location") },
     { location: t("Undri") },   
-    { location: t("kharadi_it_park_location") },
+    { location: t("kharadi_iT_park_location") },
     { location: t("bramhasun_city_location") },
     { location: t("wagholi_location") },
     { location: t("Bhavadi Road") },
@@ -147,7 +147,7 @@ const FarmersHome = ({t}) => {
   const cumulativeData = {};
 
 
-  const marketNames = ['Karve Nagar', 'Kondhwa BK', 'Hadapsar', 'Undri', 'Kharadi IT Park', 'Bramhasun City', 'Wagholi','Bhavadi Road', 'Magarpatta', 'Amanora City','Green City'];
+  const marketNames = ['Karve Nagar', 'Kondhwa BK', 'Hadapsar', 'Undri', 'Kharadi IT Park', 'Bramhasun City', 'Wagholi','Bhavadi Road', 'Amanora City', 'Magarpatta','Green City'];
 
   // Loop through each market and calculate cumulative data
   for (const market of marketNames) {
@@ -1037,7 +1037,7 @@ console.log(cumulativeData['Hadapsar']['totalNetProfit'])
                     <p>{t("monday")}    : None</p>
                     <p>{t("tuesday")}   : {t("karvenagar_location")},{t("Kondhwa BK")}</p>
                     <p>{t("wednesday")} : {t("hadapsar_location")}, {t("Undri")}</p>
-                    <p>{t("thursday")}  :  {t("kharadi_it_park_location")}</p>
+                    <p>{t("thursday")}  :  {t("kharadi_iT_park_location")}</p>
                     <p>{t("friday")}    : {t("bramhasun_city_location")}, {t("wagholi_location")} </p>
                     <p>{t("saturday")}  : {t("Bhavadi Road")}</p>
                     <p>{t("sunday")}    : {t("magarpatta_location")}, {t("amanora_city_location")}, {t("Green City")}</p>

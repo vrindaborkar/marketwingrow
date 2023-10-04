@@ -27,7 +27,6 @@
 .bookings_buttons{
     display: flex;
     justify-content: center;
-    width: 60vw;
     margin: auto;
     align-items: center;
     padding: 1rem;
@@ -35,7 +34,7 @@
 }
 
 .btns_bookings{
-    width: 40%;
+    width: 150px;
     height: 50px;
     border-radius: 10px;
     padding: 1rem;

@@ -71,7 +71,7 @@ const prevLocation = usePrevLocation(location)
   // const [selected, setSelected] = useState([]);
   const [weekId, setWeekId] = useState(0)
 
-  const arr = { 'Karve Nagar': 2, 'Kondhwa BK':2, 'Hadapsar': 3, 'Undri':3, 'Kharadi IT Park': 4,  'Bramhasun City': 5, 'Wagholi':5, 'Bhavadi Road':6, 'Green City': 0, 'Magarpatta': 0, 'Amanora City': 0}
+  const arr = { 'Karve Nagar': 2, 'Kondhwa BK':2, 'Hadapsar': 3, 'Undri':3, 'Kharadi IT Park': 4,  'Bramhasun City': 5, 'Wagholi':5, 'Bhavadi Road':6, 'Amanora City': 7,'Magarpatta': 7,'Green City': 7}
   const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
