@@ -1,17 +1,17 @@
 import "../../styles/Test.css";
 import React, { useState, useEffect ,useRef } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Stall from "./Stall";
-import authHeader from "../../services/auth.headers";
+// import authHeader from "../../services/auth.headers";
 import { Link, useNavigate, useParams,useLocation } from "react-router-dom";
 import AuthService from "../../services/auth.service";
-import ConfirmModal from "../../components/ConfirmModal";
+// import ConfirmModal from "../../components/ConfirmModal";
 import FarmerService from "../../services/farmer.service";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import Spinner from "../../components/Spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import SelectSeatModal from "../../components/SelectSeatModal";
+// import SelectSeatModal from "../../components/SelectSeatModal";
 import { Button, Typography } from "@mui/material";
 import usePrevLocation from '../../hooks/usePrevLocation'
 
@@ -23,11 +23,11 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Divider } from "@mui/material";
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import firebase from "../firebase";
-import PhoneInput from 'react-phone-input-2';
-import Alert from '@mui/material/Alert';
+// import firebase from "../firebase";
+// import PhoneInput from 'react-phone-input-2';
+// import Alert from '@mui/material/Alert';
 import useWindowDimensions from "../../components/useWindowDimensions";
-import NavMenu from "../../components/NavMenu";
+// import NavMenu from "../../components/NavMenu";
 
 const TestTemp = ({selected,setSelected,date,setdate,today,t}) => {
     const currentPath = window.location.pathname;
