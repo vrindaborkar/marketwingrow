@@ -1,7 +1,7 @@
 import { Button } from '@mui/material'
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import NavMenu from '../components/NavMenu';
+// import NavMenu from '../components/NavMenu';
 import useWindowDimensions from '../components/useWindowDimensions';
 import { useState,useEffect } from 'react';
 export default function RegisterSucces() {

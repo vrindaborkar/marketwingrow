@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import FarmerService from '../../services/farmer.service'
 import '../../styles/Farmer.css'
 import Spinner from '../../components/Spinner'
-import NavMenu from '../../components/NavMenu'
+// import NavMenu from '../../components/NavMenu'
 import useWindowDimensions from '../../components/useWindowDimensions'
 
 
