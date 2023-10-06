@@ -4,16 +4,7 @@
 
 
 
-/* .Box { */
-    /* width: 100%; */
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    /* background-color: #FAF3F6; */
-    /* background-image: url('../components/footer (2).png'); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* opacity: 0.8; */
-    /* padding-top: 10rem; */
-/* } */
+
 
 .Container {
     padding: 1rem;
@@ -32,14 +23,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,
             minmax(200px, 1fr));
-    /* grid-gap: 10px; */
+    
     justify-content: space-around;
     padding: 0 2rem;
 }
 
 .FooterLink {
     color: rgb(0, 0, 0);
-    /* margin-bottom: 20px; */
+    
     font-size: 18px;
     text-decoration: none;
     align-self: center;
@@ -106,11 +97,11 @@ a {
 
   .row {
       display: flex;
-      /* grid-gap: 10px; */
+      
       justify-content: space-around;
-      /* max-width: 50rem; */
+      
       margin-left: 0rem;
-      /* font-size: 0.5rem; */
+      
   }
 
    .Heading {
@@ -128,7 +119,7 @@ a {
 }
 
 
-/* new footer */
+
 .footer-distributed{
 	background: linear-gradient(179.1deg, rgb(43, 170, 96) 2.3%, rgb(129, 204, 104) 98.3%);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -146,13 +137,13 @@ a {
 	vertical-align: top;
 }
 
-/* Footer left */
+
 
 .footer-distributed .footer-left{
 	width: 40%;
 }
 
-/* The company logo */
+
 
 .footer-distributed h3{
 	color: #E03538;
@@ -166,7 +157,7 @@ a {
 	color: #E03538;
 }
 
-/* Footer links */
+
 
 .footer-distributed .footer-links{
 	color:  #ffffff;
@@ -189,7 +180,7 @@ a {
 	margin: 0;
 }
 
-/* Footer Center */
+
 
 .footer-distributed .footer-center{
 	width: 30%;
@@ -247,7 +238,7 @@ a {
   content: none;
 }
 
-/* Footer Right */
+
 
 .footer-distributed .footer-right{
 	width: 20%;
@@ -292,7 +283,7 @@ a {
 	margin-bottom: 5px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
+
 
 @media (max-width: 880px) {
 

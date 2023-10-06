@@ -69,8 +69,10 @@ return (
             <img src="../images/logo.png" alt="log" width="128" height="128"  />
             <h2 className="thanks">Stall booking details</h2>
             <br />
+            <div className="invoice_flex_box">
+            
             <div className="invoice_details" >
-                {/* <img src="../images/logo.png" alt="log" width="128" height="128" float="right" /> */}
+                
                 <div>Farmer Name : {bookingDetails.farmer}</div>
                 <br />
                 <div>Phone : {bookingDetails.phone}</div>
@@ -86,13 +88,15 @@ return (
                 <div>Total Amount : {bookingDetails.totalAmount}</div>
                 <br />
             </div>
-            <h2 className="thanks">Thank You !</h2>
+            <div><img src="../images/stall.jpg" alt="log" width="128px" height="128px" /></div>
+            </div>
+            <h2 className="thanks">Thank You for Booking Your Stall in Wingrow Market !</h2>
             
         </div>
         <div className="bookings_buttons" >
                 <button onClick={() => { navigate('/farmers/stallplaces') }} className="btns_bookings">Continue Booking</button>
-                <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Check booked stalls</button>
-                <button onClick={downloadPDF}className="btns_bookings">Download PDF</button>
+                <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Your Bookings</button>
+                <button onClick={downloadPDF}className="btns_bookings">Download Ticket</button>
             </div></div> : <Spinner />}
 
     </>

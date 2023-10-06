@@ -82,7 +82,7 @@ const Home = ({ t, languages }) => {
       </div>
       
       <div  className='book-btn-section'>
-        <h1>Number of Booked Stalls : {stallsBooked.length + 978}</h1>
+        <h1>Number of Booked Stalls : {stallsBooked.length + 2000}</h1>
       </div>
 
       {/* <div className='first_section'>

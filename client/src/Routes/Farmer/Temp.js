@@ -12,6 +12,7 @@ const Temp = ({t}) => {
     const [stalls, setStalls] = useState()
     const set = new Set();
     const places = [];
+    const day = ["Wednesday(3-9PM) ","Tuesday(3-9PM)","Sunday(3-9PM)","Sunday(7-9PM)","Friday(3-9PM)","Thursday (3-9PM)","Friday(3-9PM)","Wednesday(3-9PM)","Saturday(3-9PM)","Thuesday(3-9PM)","Sunday (3-9PM)","Sunday"]
     const navigate = useNavigate()
 
     if (stalls) {
@@ -52,7 +53,7 @@ const Temp = ({t}) => {
                         {t("back")}
                     </Link>
 
-                    <h2 className='main_header_places'>{t("select_market_from_below") }</h2>
+                    <h2 className='main_header_places'>{t("Select Wingrow Market From Pune..") }</h2>
                 </div>
 
                 <div className='places_wrapper'>
@@ -62,7 +63,7 @@ const Temp = ({t}) => {
                                 <div onClick={handleClick} key={e} id={e} className={`places_market_component${i % 4}`}>
                                     <img id={e} alt='logo' className='image_1' src="../images/4.webp" />
                                     <div id={e}>
-                                        <span id={e} className='places_headers'>{t("markets_in")} <br />{t(e)}</span>
+                                    <span id={e} className='places_headers'>{t("Wingrow Market in")} <br />{t(e)} <br/>{day[i]}</span>
                                     </div>
                                 </div>
                             )

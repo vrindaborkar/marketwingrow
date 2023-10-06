@@ -18,7 +18,16 @@
 
 .invoice_details{
     font-size: 1.3rem;
+    float:left;
+    flex:2;
+    width:300px;
+    font-weight: bold;
 }
+.invoice_flex_box{
+    display: flex;
+    width:100%;
+}
+
 
 .thanks{
     text-align: center;

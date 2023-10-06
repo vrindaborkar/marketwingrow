@@ -3,8 +3,8 @@ import Card from "../../components/Card";
 import Spinner from "../../components/Spinner";
 import FilterModal from "../../components/FilterModal";
 import { Link } from "react-router-dom";
-import { Divider, Grid } from "@mui/material";
-import AdminMarket from "./AdminMarket.js";
+// import { Divider, Grid } from "@mui/material";
+// import AdminMarket from "./AdminMarket.js";
 
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 const AdminHome = ({
@@ -81,7 +81,7 @@ const AdminHome = ({
       {
         title: 'Stalls Booked',
         subtitle: 'Stalls of farmers',
-        value: 478 + noOfBookedStalls,
+        value: 2000 + noOfBookedStalls,
         percent: (noOfBookedStalls * 100) / maxStalls
 
       }

@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  /* background-color: #C4094C; */
+ 
 }
 .home_container select{
  margin: 10px 10px 0px 22px;
@@ -234,10 +234,7 @@
 }
 
 .third_section_p {
-  /* font-size: 1.75rem;
-  line-height: 1.5rem; 
-  /* line-height: 1.625; */
-  /* text-align: justify; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -280,7 +277,7 @@
 }
 
 
-/* locations */
+
 
 .location_container {
   padding: 0.5rem;
@@ -336,7 +333,7 @@
   font-size: larger;
 }
 
-/* locations */
+
 @media (min-width: 1024px) {
 
   .third_section_p {
@@ -348,7 +345,7 @@
   }
 
   .first_section_component {
-    /* padding-right: 6rem;  */
+   
     flex-grow: 1;
   }
 
@@ -500,7 +497,7 @@
 .fourthsec_content {
   display: flex;
   flex-direction: column;
-  /* width: 50rem; */
+  
   line-height: 1.5;
 }
 
@@ -643,7 +640,7 @@ div.measure_box :hover{
   }
 }
 
-/* @import url(https://fonts.googleapis.com/css?family=Lato); */
+
 
 
 .keys {
@@ -669,7 +666,7 @@ div.measure_box :hover{
   font-family: 'cairo', serif;
 }
 
-/* key feature */
+
 
 @media(prefers-reduced-motion) {
   .hidden {
@@ -677,7 +674,7 @@ div.measure_box :hover{
   }
 }
 
-/* keys */
+
 .keyfeature_container>ol.listed {
   counter-reset: li;
   list-style: none;
@@ -756,43 +753,9 @@ ol.listed li.a:before {
   }
 }
 
-/* floating picture */
 
-/* @keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	} */
-/* } */
-/* 
-.container {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-} */
 
-/* .avatar>img {
-	width: 30vw;
-	height: 20vh;
-	overflow: hidden;
-	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite; 
-  width: 25vw;
-  height: 20vh; 
-  opacity: 100%;
-  } */
+
 
 .transimg>img {
   width: 15vw;
@@ -838,10 +801,7 @@ ol.listed li.a:before {
   }
 }
 
-/* corousel */
 
-/* 
-.carousel, */
 .carousel22 {
   width: 100%;
   height: 600px;
@@ -909,10 +869,7 @@ ol.listed li.a:before {
     height: 200px;
   }
 
-  /* .carousel-control-prev-icon,
-  .carousel-control-next-icon{
-    margin-bottom: rem;
-  } */
+
 
   .carousel {
     height: 180px;

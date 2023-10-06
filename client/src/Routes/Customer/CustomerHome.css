@@ -75,15 +75,14 @@
     height: 15%;
     text-align: center;
     font-size: 1.5rem;
-    /* margin-left: 40%; */
+ 
 }
 .places_head{
     margin-left: 35%;
     padding: 1rem;
     font-weight: 600;
-    /* text-align: center; */
     font-size: 3rem;
-    /* align-items: center; */
+  
 
 }
 .select_items{
@@ -100,11 +99,9 @@
     }
     .places_head{
         margin-left: 10%;
-        /* padding: 1rem; */
-        /* font-weight: 600; */
+
         text-align: center;
-        /* font-size: 3rem; */
-        /* align-items: center; */
+
     
     }
     

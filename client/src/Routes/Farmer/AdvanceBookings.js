@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Datepicker from "../../components/Datepicker";
+// import Datepicker from "../../components/Datepicker";
 import "../../styles/AdvanceBookings.css";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
@@ -488,7 +488,7 @@ const AdvanceBookings = ({ setbookingDetails, setValue }) => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <InputLabel className="stall-booking-lable">
-              Number Of Stall Required
+              Enter Number of Stalls
             </InputLabel>
             <TextField
               inputlabelprops={{
@@ -667,7 +667,7 @@ const AdvanceBookings = ({ setbookingDetails, setValue }) => {
                     PAY
                   </Button>
                   <Button style={{ width: "110px", height: "40px", paddingLeft: '5rem', paddingRight: '5rem', margin: '1rem', color: 'white', background: "linear-gradient(90deg, #07952b 41%, #0d6a02)", borderRadius: "20px", textAlign: "center", marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    PAY ON DELIVERY
+                    PAY IN MARKET
                   </Button>
                 </div>
               </Grid>

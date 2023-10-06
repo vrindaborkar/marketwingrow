@@ -1,4 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"); */
 
 * {
   font-family:  'Arturo' !important;
@@ -14,7 +13,7 @@
   margin-top: 20px;
   font-family:  'Arturo';
 }
-/* Apply bold font to all date cells */
+
 button.MuiPickersDay-root {
   font-weight: bold;
 }
@@ -23,27 +22,17 @@ button.MuiPickersDay-root {
   font-family:  'Arturo';
 }
 .main_container_stalls {
-  /* display: flex; */
-  /* flex-direction: column;*/
-   /* justify-content: center; */
-  /* align-items: center;  */
-  /* height: 100%;
-  padding: 2rem 0;
-  overflow-x: hidden; */
+
   width: 100%;
   font-family:  'Arturo';
 }
 
 
 .StallsContainer {
-  /* height: 300px; */
-  /* min-width: 300px; */
-  /* max-width: 1440px; */
+
   overflow-x: scroll;
   overflow-y: hidden;
-  /* border: 1px black solid; */
-  /* margin: 1rem; */
-  /* padding: 1rem; */
+
   display: flex;
   flex-direction: column;
   font-family:  'Arturo';
@@ -78,7 +67,7 @@ button.MuiPickersDay-root {
   width: 60%;
   height: 45%;
   margin: 10%;
-  /* margin-left: 20%; */
+  
   font-family:  'Arturo';
 }
 
@@ -88,20 +77,10 @@ button.MuiPickersDay-root {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  /* width: 20px;
-  height: 20px; */
+
   margin: auto;
   color: #fff;
-  /* color: #fff;
-  cursor: not-allowed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1px; */
-  /* font-family:  'Arturo';; */
+
   width: 90px;
   height: 42px;
   display: flex;
@@ -109,9 +88,7 @@ button.MuiPickersDay-root {
   align-items: center;
 }
 
-/* .MuiInputBase-root{
-  margin-bottom: 3rem;
-} */
+
 
 .hundred {
   background: #C0B236;
@@ -119,19 +96,11 @@ button.MuiPickersDay-root {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  /* width: 20px;
-  height: 20px; */
+
   margin: auto;
   cursor: pointer;
   color: #fff;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1px;
-  color: #fff; */
+
   font-family:  'Arturo';
   width: 90px;
   height: 42px;
@@ -146,19 +115,11 @@ button.MuiPickersDay-root {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  /* width: 20px;
-  height: 20px; */
+
   margin: auto;
   cursor: pointer;
   color: #fff;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1px;
-  color: #fff; */
+
   font-family: 'Arturo';
   width: 90px;
   height: 42px;
@@ -173,19 +134,11 @@ button.MuiPickersDay-root {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  /* width: 20px;
-  height: 20px; */
+
   margin: auto;
   cursor: pointer;
   color: #fff;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1px;
-  color: #fff; */
+
   font-family:  'Arturo';
   width: 90px;
   height: 42px;
@@ -197,22 +150,14 @@ button.MuiPickersDay-root {
 .five-hundred {
   background: #FF5B00;
   border-radius: 10px;
-  /* width: 20px;
-  height: 20px; */
+
   margin: auto;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   cursor: pointer;
   color: #fff;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1px;
-  color: #fff; */
+
   font-family: 'Arturo';
   width: 90px;
   height: 42px;
@@ -224,22 +169,14 @@ button.MuiPickersDay-root {
 .eight-hundred {
   background: #A42A56;
   border-radius: 10px;
-  /* width: 20px;
-  height: 20px; */
+
   margin: auto;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   cursor: pointer;
   color: #fff;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1px;
-  color: #fff; */
+
   font-family:  'Arturo';
   width: 90px;
   height: 42px;
@@ -249,12 +186,7 @@ button.MuiPickersDay-root {
 }
 
 .advancebookinglink {
-  /* display: inline-block;
-  align-self: flex-end;
-  position: sticky;
-  right: 20px;
-  left: 0;
-  font-size: 1.2rem; */
+
   font-size: 20px;
   color: #000;
   text-decoration: underline;
@@ -292,7 +224,7 @@ button.MuiPickersDay-root {
 
 .select_market {
   width: 100%;
-  /* min-height: 30vh; */
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -300,7 +232,7 @@ button.MuiPickersDay-root {
 }
 
 .modal_btn {
-  /* display: flex; */
+  
   justify-content: flex-start;
   align-items: center;
   width: fit-content;
@@ -345,17 +277,10 @@ button.MuiPickersDay-root {
   }
 }
 
-/* @media (max-width: 900px) {
-  .main_container_stalls {
-    align-items: flex-start;
-  }
-} */
 
-/* Added */
 
 .market-name {
   font-size: 30px;
-  /* font-family:  'Arturo';; */
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
@@ -364,8 +289,7 @@ button.MuiPickersDay-root {
 
 .stall-booking-lable {
   text-align: center;
-  /* align-items: center; */
-  /* margin-left: 25%; */
+
   font-size: 15px !important ;
   margin-bottom: 5px !important;
   color: rgba(0, 0, 0, 0.6);
@@ -373,26 +297,7 @@ button.MuiPickersDay-root {
   font-weight: 600 !important;;
 }
 
- /* .css-mhc70k-MuiGrid-root {
-   box-sizing: border-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    width: 100%;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-top: -16px;
-    width: calc(100% + 16px);
-    margin-left: -16px;
-    align-content: flex-start;
-    align-items: flex-end;
-} */
+
 .datepicker {
   
   display: grid;
@@ -451,9 +356,7 @@ button.MuiPickersDay-root {
 
 .stall-price {
   width: calc(33.33% - 10px);
-  /* Adjust the width based on your desired spacing */
-  /* margin-bottom: 10px; */
-  /* Adjust the margin based on your desired spacing */
+
 }
 .price-holder {
   display: flex;
@@ -467,12 +370,7 @@ button.MuiPickersDay-root {
   font-family:  'Arturo';;
 }
 
-/* .stall-price {
-  margin: 0 2px;
-  font-size: 15px !important;
-  font-family:  'Arturo';;
-  font-weight: 400;
-} */
+
 
 .divider {
   width: 90%;
@@ -629,12 +527,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 15px;
     font-family:  'Arturo';;
   }
-/* } */
+
 .stall-img{
   width: 70%;
-  height: 40%;
-  /* margin: 10%; */
-  /* margin-left: 20%; */
+
   font-family:  'Arturo';;
 }
 .Stalls_info_xl{
@@ -642,14 +538,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-family:  'Arturo';;
 }
 .StallsContainer{
-  /* height: 450px; */
+  
   padding: 10px;
   font-family:  'Arturo';;
 }
 .single-stall{
-  /* margin: 10px; */
+  
   text-align: center;
-  /* width: 10%; */
   font-family:  'Arturo';;
 
 }

@@ -91,7 +91,7 @@ return (
         </div>
         <div className="bookings_buttons" >
                 <button onClick={() => { navigate('/farmers/stallplaces') }} className="btns_bookings">Continue Booking</button>
-                <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Check booked stalls</button>
+                <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Your Bookings</button>
                 <button onClick={downloadPDF}className="btns_bookings">Download Ticket</button>
             </div></div> : <Spinner />}
 
