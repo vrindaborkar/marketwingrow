@@ -88,7 +88,7 @@ return (
                 <div>Total Amount : {bookingDetails.totalAmount}</div>
                 <br />
             </div>
-            <div><img src="../images/stall.jpg" alt="log" width="128px" height="128px" /></div>
+            <div className="invoice_image"><img src="../images/4.webp" alt="log" /></div>
             </div>
             <h2 className="thanks">Thank You for Booking Your Stall in Wingrow Market !</h2>
             
