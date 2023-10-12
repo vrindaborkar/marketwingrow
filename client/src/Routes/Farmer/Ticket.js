@@ -89,6 +89,7 @@ return (
                 <br />
             </div>
             <div><img src="../images/Book Your Stall.png" alt="log" width="160px" height="132px" /></div>
+            <div className="invoice_image"><img src="../images/4.webp" alt="log" /></div>
             </div>
             <h2 className="thanks">Thank You for Booking Your Stall in Wingrow Market !</h2>
             

@@ -19,15 +19,20 @@
 .invoice_details{
     font-size: 1.3rem;
     float:left;
-    flex:2;
-    width:300px;
+    
+    width:500px;
     font-weight: bold;
 }
 .invoice_flex_box{
     display: flex;
     width:100%;
 }
-
+.invoice_image{
+    width:300px;
+    
+    height: 350px;
+    float:right;
+}
 
 .thanks{
     text-align: center;

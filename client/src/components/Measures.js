@@ -48,16 +48,16 @@ function Location({t}) {
       {
           locations.map((e,i)=>{
             return(
-                <div key={e}  className="measure_box">
+                <div key={e}  className="location_container">
 
-                        <div className='inner-box'>
+                        <div className='location_component_main'>
                             
                             <img alt="team" className="measure_icon" src={e.icon}/>
                             
-                            <div className="measure_wrapper">
+                            <div className="places_main_wrapper">
                                     <h2 className="location_markets">{e.measure}</h2>
 
-                            <p className="measure_data">{e.data}</p>
+                            <p className="location_date">{e.data}</p>
                             </div>
                         </div>
                     </div>
