@@ -27,7 +27,7 @@ function Ticket({ bookingDetails }) {
         const orderUrl = REACT_APP_API_URL + "msg91";
         const { data } = await axios.post(orderUrl, { bookingDetails: bookingDetails }, { headers: authHeader() });
         setCalled(true)
-        console.log(data)
+        // console.log(data)
     }
 
     const pdfRef = useRef();
@@ -66,7 +66,7 @@ return (
     <>
         
         {bookingDetails ? <div><div className="invoice-box" ref={pdfRef}>
-            <img src="../images/logo.png" alt="log" width="128" height="128"  />
+            <img src="../images/stall.png" alt="log" width="128" height="128"  />
             <h2 className="thanks">Stall booking details</h2>
             <br />
             <div className="invoice_flex_box">
@@ -83,19 +83,20 @@ return (
                 <br />
                 <div>Payment Id : {bookingDetails.paymentDetails}</div>
                 <br />
-                <div>Addess : {bookingDetails.address}</div>
+                <div>Address : {bookingDetails.address}</div>
                 <br />
                 <div>Total Amount : {bookingDetails.totalAmount}</div>
                 <br />
             </div>
-            <div className="invoice_image"><img src="../images/4.webp" alt="log" /></div>
+            <div><img src="..\images\cherryleft.png" alt="log" width="128px" height="128px" /></div>
             </div>
             <h2 className="thanks">Thank You for Booking Your Stall in Wingrow Market !</h2>
             
+
         </div>
         <div className="bookings_buttons" >
                 <button onClick={() => { navigate('/farmers/stallplaces') }} className="btns_bookings">Continue Booking</button>
-                <button onClick={() => { navigate('../mybookings') }} className="btns_bookings">Your Bookings</button>
+                <button onClick={() => { navigate('/farmers/mybookings') }} className="btns_bookings">Your Bookings</button>
                 <button onClick={downloadPDF}className="btns_bookings">Download Ticket</button>
             </div></div> : <Spinner />}
 

@@ -121,7 +121,7 @@ const PaymentPage = ({  setbookingDetails ,bookingDetails,t }) => {
         }
         toast.success("stalls booked successfully!", {
           position: "top-center",
-          autoClose: 3000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -136,7 +136,7 @@ const PaymentPage = ({  setbookingDetails ,bookingDetails,t }) => {
       .catch((error) => {
         toast.warn("Failed to book stalls!", {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -167,7 +167,7 @@ const confirmBooking = async (e) => {
       if (bookedStalls.length === 0) {
         toast.warn("Failed to book stalls!", {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -178,7 +178,7 @@ const confirmBooking = async (e) => {
       }
       try {
         const data = {
-          purpose: "Product name", // REQUIRED
+          purpose: "Stall Booking Charge", // REQUIRED
           amount: price, // REQUIRED and must be > ₹3 (3 INR)
           currency: "INR",
           buyer_name: userCurr.name,
@@ -283,7 +283,7 @@ const confirmBooking = async (e) => {
               }
               toast.success("stalls booked successfully!", {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,

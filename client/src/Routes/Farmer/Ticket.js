@@ -83,15 +83,17 @@ return (
                 <br />
                 <div>Payment Id : {bookingDetails.paymentDetails}</div>
                 <br />
-                <div>Addess : {bookingDetails.address}</div>
+                <div>Address : {bookingDetails.address}</div>
                 <br />
                 <div>Total Amount : {bookingDetails.totalAmount}</div>
                 <br />
             </div>
+            <div><img src="../images/Book Your Stall.png" alt="log" width="160px" height="132px" /></div>
             <div className="invoice_image"><img src="../images/4.webp" alt="log" /></div>
             </div>
             <h2 className="thanks">Thank You for Booking Your Stall in Wingrow Market !</h2>
             
+
         </div>
         <div className="bookings_buttons" >
                 <button onClick={() => { navigate('/farmers/stallplaces') }} className="btns_bookings">Continue Booking</button>

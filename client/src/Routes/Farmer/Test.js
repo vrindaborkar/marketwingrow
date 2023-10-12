@@ -487,7 +487,7 @@ function Test({ setbookingDetails, setValue, t }) {
         }
            try {
                   const data = {
-                    purpose: "Product name", // REQUIRED
+                    purpose: "Stall Booking Charge", // REQUIRED
                     amount: price, // REQUIRED and must be > ₹3 (3 INR)
                     currency: "INR",
                     buyer_name: userCurr.name,
@@ -877,7 +877,7 @@ function Test({ setbookingDetails, setValue, t }) {
                   }}
 
                 /> */}
-                {console.log(date)}
+                {/* {console.log(date)} */}
 
                 {/* <DatePicker
                   selected={date}

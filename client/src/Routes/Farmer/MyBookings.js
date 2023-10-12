@@ -10,7 +10,7 @@ import authHeader from '../../services/auth.headers';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
-import NavMenu from '../../components/NavMenu';
+// import NavMenu from '../../components/NavMenu';
 import useWindowDimensions from '../../components/useWindowDimensions';
 
 const MyBookings = ({t}) => {
