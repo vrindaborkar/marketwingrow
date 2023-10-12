@@ -67,10 +67,12 @@ return (
         
         {bookingDetails ? <div><div className="invoice-box" ref={pdfRef}>
             <img src="../images/logo.png" alt="log" width="128" height="128"  />
-            <h2 className="thanks">Your Booking Details</h2>
+            <h2 className="thanks">Stall booking details</h2>
             <br />
+            <div className="invoice_flex_box">
+            
             <div className="invoice_details" >
-                {/* <img src="../images/logo.png" alt="log" width="128" height="128" float="right" /> */}
+                
                 <div>Farmer Name : {bookingDetails.farmer}</div>
                 <br />
                 <div>Phone : {bookingDetails.phone}</div>
@@ -86,7 +88,9 @@ return (
                 <div>Total Amount : {bookingDetails.totalAmount}</div>
                 <br />
             </div>
-            <h2 className="thanks">Thanks for Booking your Stall in Wingrow Market</h2>
+            <div className="invoice_image"><img src="../images/4.webp" alt="log" /></div>
+            </div>
+            <h2 className="thanks">Thank You for Booking Your Stall in Wingrow Market !</h2>
             
         </div>
         <div className="bookings_buttons" >

@@ -129,8 +129,19 @@
 
 .markets{
     display: flex;
-
+    margin-bottom: 20px;
     overflow-x: auto;
+    justify-content: space-evenly;
+}
+.marketData{
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 31px;
+    box-shadow: 5px 20px 15px 0 rgb(0 0 0 / 3%), -2px 2px 14px 0 rgb(0 0 0 / 7%)
+}
+.marketData:hover{
+    box-shadow: 4px 11px 15px 0 rgba(0,0,0,0.2), -2px 2px 14px 0 rgba(0,0,0,0.09);
 }
 
 @media (max-width : 600px) {
@@ -299,6 +310,10 @@
 .offerCarousel-container {
     width: 100%;
     padding: 50px;
+    background:
+    radial-gradient(ellipse at bottom, #87ca8a 20%, #1f8a70 100%),
+    linear-gradient(to bottom, #1f8a70 0%, #117864 100%);
+
 }
 
 .carousel .control-dots .dot {
@@ -308,7 +323,8 @@
 
 
 .carousel .slide img {
-    border-radius: 30px;
+    /* border-radius: 30px; */
+    
    
     height: 50%;
 }
@@ -661,9 +677,8 @@
  }
  .marketImages img{
     border-radius: 20px;
-    height: 400px;
-    width: 700px;
-    margin-left: 25px;
+    height: 180px;
+    width: 260px;
 }
 .marketData h2{
     margin-top: 25px;
@@ -674,10 +689,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-left: -9px;
 }
 .downButton a{
-    margin-right: 60px;
-    margin-left: 60px;
+    /* margin-right: 60px; */
+    margin-left: 10px;
 }
 #productID{
     margin-left: 310px;
