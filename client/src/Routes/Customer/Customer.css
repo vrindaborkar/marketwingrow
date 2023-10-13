@@ -724,8 +724,8 @@
     }
 
     a.btn-primary {
-        font-size: 13px !important;
-        width: fit-content !important;
+        font-size: 11px !important;
+        width: 112px !important;
         height: fit-content !important;
         padding: 10px 15px 10px 15px !important;
         margin: 0px;
@@ -755,6 +755,17 @@
     .market {
         margin: 20px;
     }
+    .markets{
+        display: flex;
+    }
+    .marketData{
+        width: 300px;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 31px;
+        box-shadow: 5px 20px 15px 0 rgb(0 0 0 / 3%), -2px 2px 14px 0 rgb(0 0 0 / 7%);
+    }
+
 
     .btn-holder {
         display: flex;
@@ -781,7 +792,7 @@
         margin-left: 80%;
     }
     .mt-3 {
-        margin-top: 10rem!important;
+        margin-top: 2rem!important;
     }
     .cards-wrapper {
         gap: 10px;
@@ -881,13 +892,13 @@
         margin-top: 20px !important;
     }
     .marketImages{
-        margin-left: 35px;
+        /* margin-left: 35px; */
     }
     .marketImages img{
-        border-radius: 20px;
-        height: 125px;
-        width: 90%;
-        margin-left: 0px;
+       border-radius: 20px;
+    height: 150px;
+    width: 260px;
+    margin-left: 0px;
     }
     .marketData h2{
         margin-top: 15px;
@@ -897,11 +908,13 @@
     .downButton{
         display: flex;
         justify-content: center;
-        margin-left: 35px;
+        margin-left: -6px;
+        margin-bottom: 0px;
     }
     .downButton a{
-        margin: 3px 40px 30px 0px;
+        /* margin: 3px 40px 30px 0px; */
     }
+    
     .liveMarket{
        margin: 5px 0px 30px 35px;
     }
@@ -929,6 +942,20 @@
         padding-left: 14px;
         padding-top: 20px;
     }
+    .marketData{
+        width: 250px;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 31px;
+        box-shadow: 5px 20px 15px 0 rgb(0 0 0 / 3%), -2px 2px 14px 0 rgb(0 0 0 / 7%);
+    }
+    .marketImages img {
+        border-radius: 20px;
+        height: 150px;
+        width: 210px;
+        margin-left: 0px;
+    }
+
     .line1>h1 {
         font-size: 1rem;
         padding: 2.5rem;
@@ -987,7 +1014,7 @@
     }
     a.btn-primary {
         font-size: 10px !important;
-        width: fit-content !important;
+        width: 98px !important;
         height: fit-content !important;
         padding: 12px 6px 8px 6px !important;
         margin: 0px;

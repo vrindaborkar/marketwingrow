@@ -162,10 +162,12 @@ const CustomersLandingpage = ({t}) => {
 
       <div className='markets'>
       {
-      
-      marketData.map(data=>(
-        <div className='marketData'>
-          <div className='marketImages'><img src={data.url} alt="markets"/></div>
+        marketData
+            .slice((page - 1) * itemsPerPage, page * itemsPerPage)
+            .map((data, index) => (
+         
+        <div className='marketData' key={index}>
+          <div className='marketImages'><img src={'https://media.timeout.com/images/105263065/750/422/image.jpg'} alt="markets"/></div>
           <h2>{data.location}</h2>
           <div className='downButton'>
           <a className="btn btn-primary" onClick={() => setOpen(true)}>
@@ -216,11 +218,25 @@ const CustomersLandingpage = ({t}) => {
             </div>
             {/* <hr style={{margin: '0px 20px 15px 20px'}}></hr> */}
         </div>
-      ))
-      
-      
-      }
+      ))}
       </div>
+      <div className="d-flex justify-content-center mt-3">
+          <button
+            className="btn btn-primary me-3"
+            onClick={() => handleClick("prev")}
+            disabled={page === 1}
+          >
+            {t("Previous")}
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={() => handleClick("next")}
+            disabled={page === maxPages}
+          >
+            {t("Next")}
+          </button>
+        </div>
+      
         {/* <div className="cards-wrapper">
           {cards
             .slice((page - 1) * itemsPerPage, page * itemsPerPage)
