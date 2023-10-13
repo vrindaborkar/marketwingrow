@@ -68,7 +68,7 @@ const CustomersLandingpage = ({t}) => {
       setItemsPerPage(3)
     }
   }, [isMobile]);
-  const maxPages = Math.ceil(cards.length / itemsPerPage);
+  const maxPages = Math.ceil(marketData.length / itemsPerPage);
 
 
 
