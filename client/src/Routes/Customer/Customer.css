@@ -192,7 +192,11 @@
     width: fit-content;
     text-align: center;
 }
-
+.marketImages img{
+    border-radius: 20px;
+    height: 180px;
+    width: 260px;
+}
 .market img {
     width: 250px;
     border-radius: 7.73239px;
@@ -208,6 +212,52 @@
     font-size: 15px;
     padding: 0 0 5px 0;
 }
+.liveMarket{
+    margin: 0px 0px 30px 35px;
+ }
+ .liveMarket h1{
+     font-weight: bold;
+     position: relative;
+     top: 23px;
+     margin-bottom: -7px;
+ }
+ .liveMarket hr{
+     margin-left: 200px;
+     margin-right: 20px;
+ }
+ 
+.marketData h2{
+    margin-top: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.downButton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: -9px;
+}
+.downButton a{
+    /* margin-right: 60px; */
+    margin-left: 10px;
+}
+#productID{
+    margin-left: 310px;
+    margin-right: 20px;
+}
+#liveHR{
+    margin-left: 165px;
+    margin-right: 20px;
+}
+.topSellers {
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-evenly;
+}
+#feedbackHR{
+    margin-left: 145px;
+    margin-right: 20px;
+}
 
 .btn {
     width: 100px;
@@ -219,7 +269,7 @@
     border-radius: 50px;
     font-style: normal;
     font-weight: 400;
-    font-size: 12px !important;
+    font-size: 11px !important;
     line-height: 128.91%;
     text-align: center;
     color: #FFFFFF;
@@ -327,7 +377,11 @@
     width: 15px !important;
     height: 15px !important;
 }
-
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+    flex-direction: column;
+    flex-flow: column;
+    height: 100%;
+}
 
 .carousel .slide img {
     /* border-radius: 30px; */
@@ -415,6 +469,21 @@
         justify-content: center;
 
     }
+    .marketData {
+        width: 215px;
+        height: 248px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 31px;
+        box-shadow: 5px 20px 15px 0 rgb(0 0 0 / 3%), -2px 2px 14px 0 rgb(0 0 0 / 7%);
+    }
+    .marketImages img {
+        border-radius: 20px;
+        height: 126px;
+        width: 195px;
+    }
+    
+    
     .first_header>h1 {
         font-weight: 900;
         font-size: 3rem;
@@ -429,21 +498,36 @@
         margin-top: 10px;
     }
     .categories-holder {
-        width: 80%;
+        width: 90%;
         height: 750px;
         justify-content: space-between;
-        margin-left: 8em;
+        /* margin-left: 8em; */
     }
-    .category{
+    .category {
         padding: 10px;
         text-align: center;
-        width: 200px;
-        height: 200px;
+        margin: 10px;
+        width: 180px;
+        height: 215px;
+        border-radius: 8px;
+    }
+    .liveMarket h1 {
+        font-weight: bold;
+        position: relative;
+        top: 23px;
+        font-size: 27px;
+        margin-bottom: -7px;
+    }
+    .liveMarket hr {
+        margin-left: 200px;
+        margin-right: 20px;
+        margin-top: 13px;
     }
     .category img {
-        width: 150px;
+        width: 160px;
         height: 150px;
-        border-radius: 30px;
+        border-radius: 15px;
+        margin-bottom: 0px;
     }
 }
 
@@ -454,6 +538,7 @@
         position: absolute;
         opacity: 0.2;
     }
+    
 
     .transimgrC>img {
         width: 20vw;
@@ -491,7 +576,25 @@
         margin-bottom: 0px;
         padding-top: 0px;
     }
-    
+    .marketData {
+        width: 215px;
+        height: 248px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 31px;
+        box-shadow: 5px 20px 15px 0 rgb(0 0 0 / 3%), -2px 2px 14px 0 rgb(0 0 0 / 7%);
+    }
+    .marketImages img {
+        border-radius: 20px;
+        height: 126px;
+        width: 195px;
+    }
+    .downButton a {
+        /* margin-right: 60px; */
+        margin-left: 10px;
+        padding-top: 11px;
+        font-size: 11px;
+    }
 
 }
 @media only screen and (max-width: 550px) {
@@ -669,56 +772,7 @@
     }
 }
 
-.liveMarket{
-    margin: 0px 0px 30px 35px;
- }
- .liveMarket h1{
-     font-weight: bold;
-     position: relative;
-     top: 23px;
-     margin-bottom: -7px;
- }
- .liveMarket hr{
-     margin-left: 200px;
-     margin-right: 20px;
- }
- .marketImages img{
-    border-radius: 20px;
-    height: 180px;
-    width: 260px;
-}
-.marketData h2{
-    margin-top: 25px;
-    text-align: center;
-    font-weight: bold;
-}
-.downButton{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-left: -9px;
-}
-.downButton a{
-    /* margin-right: 60px; */
-    margin-left: 10px;
-}
-#productID{
-    margin-left: 310px;
-    margin-right: 20px;
-}
-#liveHR{
-    margin-left: 165px;
-    margin-right: 20px;
-}
-.topSellers {
-    display: flex;
-    overflow-x: auto;
-    justify-content: space-evenly;
-}
-#feedbackHR{
-    margin-left: 145px;
-    margin-right: 20px;
-}
+
 @media only screen and (max-width: 450px) {
     .title-br {
         display: block;

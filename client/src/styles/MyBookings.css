@@ -11,6 +11,16 @@
     font-size: 1.4rem;
     position: relative;
 }
+.location_image_Mybookings {
+    object-fit: cover;
+    object-position: center;
+    margin-right: 1rem;
+    background-color: #F3F4F6;
+    flex-shrink: 0;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 9999px;
+  }
 
 .booking_content {
     min-height: 80vh;
@@ -113,6 +123,10 @@
     .card_booking {
         width: 80%;
     }
+     .location_image_main {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
 }
 

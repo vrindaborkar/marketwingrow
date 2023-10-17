@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import {Select, MenuItem} from '@mui/material'
+import Select from "@mui/material/Select";
+import FormControl from "@mui/material/FormControl";
+
 import Typography from "@mui/material/Typography";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
 import { Link, useNavigate,useLocation } from "react-router-dom";
 import AuthService from "../services/auth.service";
 import Spinner from "../components/Spinner";
@@ -279,8 +283,20 @@ export default function SignIn({date, t}) {
               // className="textfield"
               onChange={handleChange}
             />
+            <FormControl
+                  className="textfield"
+                  sx={{ width: "80%", marginLeft: "0rem", fontSize: "14"}}
+                >
+            <InputLabel
+                    inputlabelprops={{
+                      style: { fontSize: 14, fontFamily: "Arturo" },
+                    }}
+                    id="demo-simple-select-helper-label"
+                  >
+                    <span className="heading">Type</span>
+                  </InputLabel>
             <Select
-                sx={{width: "80%", marginLeft: "0rem"}}
+                sx={{width: "100%", marginLeft: "0rem"}}
                     inputProps={{
                       autoComplete: 'off'
                     }}
@@ -326,7 +342,7 @@ export default function SignIn({date, t}) {
                       <span className="heading3">Employee</span>
                     </MenuItem> */}
 
-                  </Select>
+                  </Select></FormControl>
           
            
             {/* <Link className="form-link" to={"/Forgot"} variant="body2">
