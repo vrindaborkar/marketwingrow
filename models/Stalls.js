@@ -5,6 +5,7 @@ const Stalls = mongoose.model(
   new mongoose.Schema({
       location:String,
       address:String,
+      link: String,
       stallName: String,
       stallPrice: Number,
       stallNo:Number

@@ -71,7 +71,8 @@ exports.postStalls = async(req,res,next)=>{
         bookedAt:bookedAt,
         bookedBy:bookedBy,
         isBooked:isBooked,
-        stallNo:e.stallNo
+        stallNo:e.stallNo,
+        link:e.link
       })
 
       const data = await resp.save();

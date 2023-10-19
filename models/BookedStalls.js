@@ -6,6 +6,7 @@ const BookedStalls = mongoose.model(
       location:String,
       address:String,
       stallName: String,
+      link:String,
       stallPrice: Number,
       isBooked: Boolean,
       bookedBy: String,

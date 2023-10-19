@@ -133,10 +133,11 @@ const MyBookings = ({t}) => {
                                         <p className='card_para'>{e.location}</p>
                                         <p className='card_para'>{e.stallName}</p>
                                         <p className='card_para'>{e.bookedAt}</p>
-                                        <a  target="_blank"><div style={{display:"flex",margin:"auto"}}>
+                                        {console.log(e.link) }
+                                        <div style={{display:"flex",margin:"auto"}}>
                                         <img alt="team" className="location_image_Mybookings" src="https://e7.pngegg.com/pngimages/938/419/png-clipart-allied-communications-inc-computer-icons-location-youtube-symbol-addres-logo-company-text-thumbnail.png"/>
                             
-                                        <p className='card_para'>{e.address}</p> </div></a>
+                                        <a  href={e.link} target="_blank"><p className='card_para'>{e.address}</p> </a></div>
                                         <span>
                                                 {bookingExpired?
                                                 <div style={{cursor:"not-allowed",padding:"4px",backgroundColor:"gray",border:"none",marginTop:"10px",textAlign:"center"}}>Booking Expired</div>

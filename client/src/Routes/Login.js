@@ -293,7 +293,7 @@ export default function SignIn({date, t}) {
                     }}
                     id="demo-simple-select-helper-label"
                   >
-                    <span className="heading">Type</span>
+                    <span className="heading">Role</span>
                   </InputLabel>
             <Select
                 sx={{width: "100%", marginLeft: "0rem"}}
