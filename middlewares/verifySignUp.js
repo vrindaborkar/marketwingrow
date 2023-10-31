@@ -1,9 +1,10 @@
 const User = require('../models/User')
 
 checkDuplicatePhone = (req, res, next) => {
-  User.findOne({
+   User.findOne({
     phone: req.body.phone
   }).exec((err, user) => {
+    console.log(user);
     if (err) {
       res.status(500).send({ message: err });
       return;

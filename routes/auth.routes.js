@@ -10,7 +10,7 @@ module.exports = function(app) {
     next();
   });
 
-  app.post("/auth/signup",[verifySignUp.checkDuplicatePhone],controller.signup );
+  app.post("/auth/signup",controller.signup );
   app.post("/auth/signin", controller.signin);
   app.post("/auth/feedback", controller.feedback);
   // app.put("/auth/image" , controller.postPic)
