@@ -186,7 +186,6 @@ exports.signin =async (req, res) => {
   const user = await  User.findOne({
     phone: req.body.phone,
     role:req.body.role
-  
   });
 
   if (user) {
@@ -218,6 +217,91 @@ exports.signin =async (req, res) => {
   }
 
 };
+
+
+exports.adminSignUp =async (req, res) => {
+  const {  phone , password , firstname , lastname , role , farmertype , address , tags,joiningDate,employeeID,desigination} = req.body;
+  console.log(phone);
+  const userdata =await User.find({ "phone": phone , "role": role},
+  );
+
+ console.log(userdata[0]);
+  if(userdata[0]){
+    res.status(400).json({
+      success: false,
+      message: "Phone Number is already in use!",
+      message2:"please enter a different role that is not already in use"
+    
+    });
+  }
+else{
+     const user_creat =await User.create({
+firstName:firstname,
+lastName:lastname,
+phone:phone,
+password:password,
+role:role,
+employeeID :employeeID,
+
+     
+
+
+
+
+     });
+
+     if(user_creat){
+       res.status(200).json({
+         success:true,
+         message:"user created successfully",
+         data:user_creat
+       })
+     }
+    }
+};
+
+
+
+exports.adminSignin =async (req, res) => {
+  const user = await  User.findOne({
+    phone: req.body.phone,
+    role:req.body.role
+  });
+
+  if (user) {
+    
+    var token = jwt.sign({ id: user.id }, config.secret, {
+      expiresIn: 86400 // 24 hours
+    });
+    res.status(200).send({
+      status: 'success',
+      message : 'Your are logged in',
+      id: user._id,
+      firstname: user.firstname,
+      lastname:user.lastname,
+      phone: user.phone,
+      role: user.role,
+      accessToken: token,
+      farmertype:user.farmertype,
+      pic:user.pic,
+      address:user.address,
+      joiningDate : user.joiningDate,
+      employeeID :user.employeeID,
+      desigination:user.desigination,
+      
+    });
+  }else{
+    return res.status(404).send({ 
+      status: 'failed',
+      message: "User Not found." });
+  }
+
+};
+
+
+
+
+
 
 
 

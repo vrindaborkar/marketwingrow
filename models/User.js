@@ -21,11 +21,16 @@ const User = mongoose.model(
     },
     phone:{
       type:String,
+      maxlength:10,
+      minlength:10,
+      
    
     
     },
     password: {
       type:String,
+      minlength:6,
+
     
   
     },

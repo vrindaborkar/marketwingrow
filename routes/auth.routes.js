@@ -13,6 +13,12 @@ module.exports = function(app) {
   app.post("/auth/signup",controller.signup );
   app.post("/auth/signin", controller.signin);
   app.post("/auth/feedback", controller.feedback);
+
+  //admin
+  app.post("/auth/adminSignUp",controller.adminSignUp );
+  app.post("/auth/adminSignin",controller.adminSignin );
+
+
   // app.put("/auth/image" , controller.postPic)
    //app.post("/auth/address", controller.addAddress);
   // app.post("/signup",[verifySignUp.checkDuplicatePhone],controller.signup );
