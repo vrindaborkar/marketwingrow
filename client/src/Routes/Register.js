@@ -368,96 +368,98 @@ export default function Register({ t, languages }) {
 
     console.log(phoneNumber);
 
-    AuthService.check(data.phone)
-      .then(
-        () => {
-          const appVerifier = window.recaptchaVerifier;
-          firebase
-            .auth()
-            .signInWithPhoneNumber(phoneNumber, appVerifier)
-            .then((confirmationResult) => {
-              // SMS sent. Prompt user to type the code from the message, then sign the
-              // user in with confirmationResult.confirm(code).
-              toast.success("OTP SENT!", {
-                position: "top-center",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-              });
-              window.confirmationResult = confirmationResult;
-              console.log("OTP has been sent");
+    const appVerifier = window.recaptchaVerifier;
+    firebase
+      .auth()
+      .signInWithPhoneNumber(phoneNumber, appVerifier)
+      .then((confirmationResult) => {
+        // SMS sent. Prompt user to type the code from the message, then sign the
+        // user in with confirmationResult.confirm(code).
+        toast.success("OTP SENT!", {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        window.confirmationResult = confirmationResult;
+        console.log("OTP has been sent");
 
-              // ...
-            })
-            .catch((error) => {
-              // Error; SMS not sent
-              // ...
-              console.log("SMS Not Sent");
-              toast.warn("Invalid Phone Number", {
-                position: "top-center",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-              });
-              setData({
-                phone: "",
-                password: "",
-                firstname: "",
-                lastname: "",
-                type: "",
-                farmertype: "",
-                address: "",
-                // joiningDate :"",
-                employeeID :"",
-                // desigination:""
-              });
-              setTimeout(() => {
+        // ...
+      })
+      .catch((error) => {
+        // Error; SMS not sent
+        // ...
+        console.log("SMS Not Sent");
+        toast.warn("Invalid Phone Number", {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setData({
+          phone: "",
+          password: "",
+          firstname: "",
+          lastname: "",
+          type: "",
+          farmertype: "",
+          address: "",
+          // joiningDate :"",
+          employeeID :"",
+          // desigination:""
+        });
+        setTimeout(() => {
 
-                //window.location.reload(false);
-              }, 1000);
-            });
-        },
-        (error) => {
-          toast.warn("User Already Exists", {
-            position: "top-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-          setData({
-            phone: "",
-            password: "",
-            firstname: "",
-            lastname: "",
-            type: "",
-            farmertype: "",
-            address: "",
-            // joiningDate :"",
-            employeeID :"",
-            // desigination:""
-          });
-          setTimeout(() => {
-            if (path === 'register') {
-              navigate("/login");
-            } else {
-              navigate("/login", { state: { path: 'stall', id: id, bookedStalls: bookedStalls } });
-            }
-            // window.location.reload();
-          }, 1000);
-        }
-      );
+          //window.location.reload(false);
+        }, 1000);
+      });
+
+    // AuthService.check(data.phone)
+    //   .then(
+    //     () => {
+
+    //     },
+    //     (error) => {
+    //       toast.warn("User Already Exists", {
+    //         position: "top-center",
+    //         autoClose: 1000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: "light",
+    //       });
+    //       setData({
+    //         phone: "",
+    //         password: "",
+    //         firstname: "",
+    //         lastname: "",
+    //         type: "",
+    //         farmertype: "",
+    //         address: "",
+    //         // joiningDate :"",
+    //         employeeID :"",
+    //         // desigination:""
+    //       });
+    //       setTimeout(() => {
+    //         if (path === 'register') {
+    //           navigate("/login");
+    //         } else {
+    //           navigate("/login", { state: { path: 'stall', id: id, bookedStalls: bookedStalls } });
+    //         }
+    //         // window.location.reload();
+    //       }, 1000);
+    //     }
+    //   );
 
 
 
@@ -730,13 +732,13 @@ export default function Register({ t, languages }) {
                       sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
                       value={"farmer"}
                     >
-                      <span className="heading">Producer</span>
+                      <span className="heading">farmer</span>
                     </MenuItem>
                     <MenuItem
                       sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
                       value={"customer"}
                     >
-                      <span className="heading">Consumer</span>
+                      <span className="heading">customer</span>
                     </MenuItem>
                     {/* <MenuItem
                       sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}

@@ -7,7 +7,7 @@ const API_URL1 = "https://wingrowmarket.com:8443/auth/";
  //const API_URL = "https://wingrowmarket.com/";
 //const REACT_APP_API_URL="http://localhost:4000/";
 const { REACT_APP_API_URL } = process.env;
-//console.log("the url : ",REACT_APP_API_URL)
+
 
 const register = (
   phone,
@@ -34,6 +34,11 @@ const register = (
 };
 
 const login = (phone, role,password) => {
+  console.log({
+    phone,
+    role,
+    password
+  })
   return axios.post(REACT_APP_API_URL + "auth/signin", {
       phone,
       role,
@@ -45,13 +50,7 @@ const login = (phone, role,password) => {
       return response.data;
     });
 };
-const check = (phone) => {
-  return axios.post(REACT_APP_API_URL + "check" ,{
-    phone
-  }).then((response) =>{
-    return response.data
-  })
-}
+
 const addAddress = (address) => {
   return axios
     .post(REACT_APP_API_URL + "auth/address", { address }, { headers: authHeader() })
@@ -102,7 +101,7 @@ const AuthService = {
   addimage,
   feedback,
   newpassword,
-  check
+  // check
 };
 
 export default AuthService;

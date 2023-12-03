@@ -327,20 +327,20 @@ export default function SignIn({date, t}) {
                       sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
                       value={"farmer"}
                     >
-                      <span className="heading3">Producer</span>
+                      <span className="heading3">farmer</span>
                     </MenuItem>
                     <MenuItem
                       sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
                       value={"customer"}
                     >
-                      <span className="heading3">Consumer</span>
+                      <span className="heading3">customer</span>
                     </MenuItem>
-                    {/* <MenuItem
+                    <MenuItem
                       sx={{ fontSize: "1.3rem", fontFamily: "Arturo" }}
-                      value={"employee"}
+                      value={"admin"}
                     >
-                      <span className="heading3">Employee</span>
-                    </MenuItem> */}
+                      <span className="heading3">admin</span>
+                    </MenuItem>
 
                   </Select></FormControl>
           

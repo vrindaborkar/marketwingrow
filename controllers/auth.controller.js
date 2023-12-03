@@ -17,9 +17,9 @@ cloudinary.config({
 
 exports.signup = async(req , res , next)=>{
     
-        const {  phone , password , firstname , lastname , role , farmertype , address , tags,joiningDate,employeeID,desigination} = req.body;
+        const {  phone , password , firstname , lastname , type , farmertype , address , tags,joiningDate,employeeID,desigination} = req.body;
         console.log(phone);
-        const userdata =await User.find({ "phone": phone , "role": role},
+        const userdata =await User.find({ "phone": phone , "role": type},
         );
 
        console.log(userdata[0]);
@@ -37,9 +37,8 @@ firstName:firstname,
 lastName:lastname,
 phone:phone,
 password:password,
-role:role,
+role:type,
 farmertype:farmertype,
-
 address:address,
 tags:tags,
 
@@ -183,6 +182,7 @@ exports.checkPhone =async(req,res) =>{
 //   };
 
 exports.signin =async (req, res) => {
+  console.log(req.body)
   const user = await  User.findOne({
     phone: req.body.phone,
     role:req.body.role
@@ -220,7 +220,7 @@ exports.signin =async (req, res) => {
 
 
 exports.adminSignUp =async (req, res) => {
-  const {  phone , password , firstname , lastname , role , farmertype , address , tags,joiningDate,employeeID,desigination} = req.body;
+  const {  phone , password , firstname , lastname , type , farmertype , address , tags,joiningDate,employeeID,desigination} = req.body;
   console.log(phone);
   const userdata =await User.find({ "phone": phone , "role": role},
   );
@@ -240,12 +240,8 @@ firstName:firstname,
 lastName:lastname,
 phone:phone,
 password:password,
-role:role,
+role:type,
 employeeID :employeeID,
-
-     
-
-
 
 
      });
@@ -259,8 +255,6 @@ employeeID :employeeID,
      }
     }
 };
-
-
 
 exports.adminSignin =async (req, res) => {
   const user = await  User.findOne({
@@ -297,14 +291,6 @@ exports.adminSignin =async (req, res) => {
   }
 
 };
-
-
-
-
-
-
-
-
   exports.postPic = async(req,res) => {
     let token = req.headers["x-access-token"];
     const { id } = jwt_decode(token)
