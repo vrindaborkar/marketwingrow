@@ -21,10 +21,10 @@ const register = (
   employeeID,
 ) => {
   return axios.post(REACT_APP_API_URL + "auth/signup", {
-    phone,
-    password,
     firstname,
     lastname,
+    phone,
+    password, 
     type,
     farmertype,
     address,
