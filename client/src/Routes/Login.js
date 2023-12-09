@@ -310,7 +310,7 @@ export default function SignIn({date, t}) {
                     id="role"
                     label="Role"
                     name="role"
-                    value={data.role}
+                    value={data.type}
                     autoFocus
                     color="success"
                     className="heading input"
